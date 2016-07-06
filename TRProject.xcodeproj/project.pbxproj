@@ -22,6 +22,17 @@
 		38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F71C8C225D00FCBF96 /* Main.storyboard */; };
 		38ADA3B81C626AAF0093502F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3B71C626AAF0093502F /* main.m */; };
 		38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3BA1C626AAF0093502F /* AppDelegate.m */; };
+		A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15491D2D0BAB00DBBFC2 /* RecommendModel.m */; };
+		A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D154C1D2D0BCF00DBBFC2 /* CategoryModel.m */; };
+		A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D154F1D2D0BDF00DBBFC2 /* RadioModel.m */; };
+		A20D15531D2D0BEC00DBBFC2 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15521D2D0BEC00DBBFC2 /* ListModel.m */; };
+		A20D15561D2D0C5000DBBFC2 /* RecommendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15551D2D0C5000DBBFC2 /* RecommendTableViewController.m */; };
+		A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D155A1D2D0CC700DBBFC2 /* CategoryTableViewController.m */; };
+		A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */; };
+		A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */; };
+		A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */; };
+		A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15661D2D125E00DBBFC2 /* NetManager.m */; };
+		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */; };
 		C13F827F2EF9A3C404789040 /* libPods-TRProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AF26D7AD9D7A6080C6041D /* libPods-TRProject.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +68,28 @@
 		38ADA3B91C626AAF0093502F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38ADA3BA1C626AAF0093502F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7635B9603C1F6424EC232246 /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
+		A20D15481D2D0BAB00DBBFC2 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		A20D15491D2D0BAB00DBBFC2 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
+		A20D154B1D2D0BCF00DBBFC2 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		A20D154C1D2D0BCF00DBBFC2 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		A20D154E1D2D0BDF00DBBFC2 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
+		A20D154F1D2D0BDF00DBBFC2 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
+		A20D15511D2D0BEC00DBBFC2 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		A20D15521D2D0BEC00DBBFC2 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		A20D15541D2D0C5000DBBFC2 /* RecommendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTableViewController.h; sourceTree = "<group>"; };
+		A20D15551D2D0C5000DBBFC2 /* RecommendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTableViewController.m; sourceTree = "<group>"; };
+		A20D15591D2D0CC700DBBFC2 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		A20D155A1D2D0CC700DBBFC2 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		A20D155C1D2D0CE200DBBFC2 /* RadioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioTableViewController.h; sourceTree = "<group>"; };
+		A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioTableViewController.m; sourceTree = "<group>"; };
+		A20D155F1D2D0CF300DBBFC2 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		A20D15621D2D0E7000DBBFC2 /* discoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discoverViewController.h; sourceTree = "<group>"; };
+		A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = discoverViewController.m; sourceTree = "<group>"; };
+		A20D15651D2D125E00DBBFC2 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		A20D15661D2D125E00DBBFC2 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetial.h; sourceTree = "<group>"; };
+		A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetial.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +136,8 @@
 		38A1A32D1C74526C007EEEB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A20D15681D2D1D5B00DBBFC2 /* detial */,
+				A20D15581D2D0C9700DBBFC2 /* discover */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +145,8 @@
 		38A1A32E1C74526C007EEEB7 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				A20D15651D2D125E00DBBFC2 /* NetManager.h */,
+				A20D15661D2D125E00DBBFC2 /* NetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -124,20 +161,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		38A1A3301C74526C007EEEB7 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		38A1A3311C74526C007EEEB7 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +171,9 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A20D15621D2D0E7000DBBFC2 /* discoverViewController.h */,
+				A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */,
+				A20D15571D2D0C6500DBBFC2 /* discover */,
 				38A1A3341C74526C007EEEB7 /* ViewController.h */,
 				38A1A3351C74526C007EEEB7 /* ViewController.m */,
 			);
@@ -191,8 +217,6 @@
 				38A1A32D1C74526C007EEEB7 /* Model */,
 				38A1A32E1C74526C007EEEB7 /* NetManager */,
 				38A1A32F1C74526C007EEEB7 /* Resource */,
-				38A1A3301C74526C007EEEB7 /* Tool */,
-				38A1A3311C74526C007EEEB7 /* Vendor */,
 				38A1A3321C74526C007EEEB7 /* View */,
 				38A1A3331C74526C007EEEB7 /* ViewController */,
 				38A1A3361C74526C007EEEB7 /* ViewModel */,
@@ -218,6 +242,53 @@
 				7635B9603C1F6424EC232246 /* Pods-TRProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A20D15571D2D0C6500DBBFC2 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+				A20D15541D2D0C5000DBBFC2 /* RecommendTableViewController.h */,
+				A20D15551D2D0C5000DBBFC2 /* RecommendTableViewController.m */,
+				A20D15591D2D0CC700DBBFC2 /* CategoryTableViewController.h */,
+				A20D155A1D2D0CC700DBBFC2 /* CategoryTableViewController.m */,
+				A20D155C1D2D0CE200DBBFC2 /* RadioTableViewController.h */,
+				A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */,
+				A20D155F1D2D0CF300DBBFC2 /* ListTableViewController.h */,
+				A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */,
+			);
+			name = discover;
+			sourceTree = "<group>";
+		};
+		A20D15581D2D0C9700DBBFC2 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+				A20D15481D2D0BAB00DBBFC2 /* RecommendModel.h */,
+				A20D15491D2D0BAB00DBBFC2 /* RecommendModel.m */,
+				A20D154B1D2D0BCF00DBBFC2 /* CategoryModel.h */,
+				A20D154C1D2D0BCF00DBBFC2 /* CategoryModel.m */,
+				A20D154E1D2D0BDF00DBBFC2 /* RadioModel.h */,
+				A20D154F1D2D0BDF00DBBFC2 /* RadioModel.m */,
+				A20D15511D2D0BEC00DBBFC2 /* ListModel.h */,
+				A20D15521D2D0BEC00DBBFC2 /* ListModel.m */,
+			);
+			name = discover;
+			sourceTree = "<group>";
+		};
+		A20D15681D2D1D5B00DBBFC2 /* detial */ = {
+			isa = PBXGroup;
+			children = (
+				A20D156F1D2D1EF200DBBFC2 /* categoryDetial */,
+				A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */,
+				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */,
+			);
+			name = detial;
+			sourceTree = "<group>";
+		};
+		A20D156F1D2D1EF200DBBFC2 /* categoryDetial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = categoryDetial;
 			sourceTree = "<group>";
 		};
 		CA5127F42421C94949953D16 /* Frameworks */ = {
@@ -354,15 +425,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
+				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
+				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
+				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
+				A20D15531D2D0BEC00DBBFC2 /* ListModel.m in Sources */,
+				A20D15561D2D0C5000DBBFC2 /* RecommendTableViewController.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
+				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
+				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
 				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
+				A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
+				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,
+				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

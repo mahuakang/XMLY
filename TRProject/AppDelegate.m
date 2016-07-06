@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NetManager.h"
 
 @interface AppDelegate ()
 @end
@@ -17,6 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     [self setupGlobalConfig];
+    [NetManager getList:^(id model, NSError *error) {
+        
+    }];
+    
     return YES;
 }
 
