@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NetManager.h"
-
+#import "discoverViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -17,9 +17,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     [self setupGlobalConfig];
-    [NetManager getList:^(id model, NSError *error) {
-        
-    }];
+    discoverViewController *disvc= [discoverViewController new];
+    disvc.showOnNavigationBar =YES;
+    disvc.menuViewStyle =0;
+    disvc.menuBGColor =[UIColor clearColor];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:disvc];
+    self.window.rootViewController =navi;
     
     return YES;
 }

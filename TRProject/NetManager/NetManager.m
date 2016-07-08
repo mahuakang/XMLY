@@ -11,7 +11,15 @@
 #import "CategoryModel.h"
 #import "RadioModel.h"
 #import "ListModel.h"
+#import "WMPageNumModel.h"
 @implementation NetManager
++ (instancetype)getDetialPageNumByCategory:(NSString *)categoryName SecondCategory:(NSString *)SecondName categoryType:(NSString *)categoryType completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path = [NSString stringWithFormat:wmDetialPath,categoryName,SecondName,categoryType];
+    NSString *Enpath = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [self GET:Enpath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([WMPageNumModel parseJSON:jsonObject],error);
+    }];
+}
 +(instancetype)getRecommendList:(void (^)(id, NSError *))completionHandler listcompletionHandler:(void(^)(id model,NSError*error))listcompletionHandler{
     [self GET:RecommendListPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !listcompletionHandler?:listcompletionHandler([RecommendModelList parseJSON:jsonObject],error);

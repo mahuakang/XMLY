@@ -62,5 +62,7 @@ static const int ddLogLevel = DDLogLevelError;
 //#import <RESideMenu.h>          //QQ的左侧菜单风格
 
 //#import <MWPhotoBrowser.h>      //图片浏览器
+#import <iCarousel.h>
+#import <UITableView+FDTemplateLayoutCell.h>
 
 #endif /* PrefixHeader_pch */

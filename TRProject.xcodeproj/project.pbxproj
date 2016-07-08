@@ -33,6 +33,8 @@
 		A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */; };
 		A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15661D2D125E00DBBFC2 /* NetManager.m */; };
 		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */; };
+		A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564481D2E4AA7004A504B /* WMPageNumModel.m */; };
+		A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */; };
 		C13F827F2EF9A3C404789040 /* libPods-TRProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AF26D7AD9D7A6080C6041D /* libPods-TRProject.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,10 @@
 		A20D15661D2D125E00DBBFC2 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetial.h; sourceTree = "<group>"; };
 		A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetial.m; sourceTree = "<group>"; };
+		A23564471D2E4AA7004A504B /* WMPageNumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageNumModel.h; sourceTree = "<group>"; };
+		A23564481D2E4AA7004A504B /* WMPageNumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageNumModel.m; sourceTree = "<group>"; };
+		A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal3on1Cell.h; sourceTree = "<group>"; };
+		A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Horizontal3on1Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 			children = (
 				A20D15681D2D1D5B00DBBFC2 /* detial */,
 				A20D15581D2D0C9700DBBFC2 /* discover */,
+				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
+				A23564481D2E4AA7004A504B /* WMPageNumModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +172,8 @@
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */,
+				A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,8 +288,6 @@
 			isa = PBXGroup;
 			children = (
 				A20D156F1D2D1EF200DBBFC2 /* categoryDetial */,
-				A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */,
-				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */,
 			);
 			name = detial;
 			sourceTree = "<group>";
@@ -287,6 +295,8 @@
 		A20D156F1D2D1EF200DBBFC2 /* categoryDetial */ = {
 			isa = PBXGroup;
 			children = (
+				A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */,
+				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */,
 			);
 			name = categoryDetial;
 			sourceTree = "<group>";
@@ -439,8 +449,10 @@
 				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */,
+				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
+				A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */,
 				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
 				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,
