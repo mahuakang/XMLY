@@ -45,7 +45,7 @@
         completionHandler(responseObject, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completionHandler(nil, error);
-        DDLogError(@"error %@", error);
+        //DDLogError(@"error %@", error);
     }];
 }
 

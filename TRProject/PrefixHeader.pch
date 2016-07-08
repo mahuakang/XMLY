@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import <WMPageController.h>
 #import "AppDelegate.h"
 
 //用于存放全局宏定义 或者 静态字符串

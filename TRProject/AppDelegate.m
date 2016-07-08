@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "NetManager.h"
-#import "discoverViewController.h"
+#import "DiscorverPageController.h"
+#import "RecommendTableViewController.h"
+#import "CategoryTableViewController.h"
+#import "RadioTableViewController.h"
+#import "ListTableViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -17,12 +21,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     [self setupGlobalConfig];
-    discoverViewController *disvc= [discoverViewController new];
+    DiscorverPageController *disvc= [DiscorverPageController new];
     disvc.showOnNavigationBar =YES;
     disvc.menuViewStyle =0;
     disvc.menuBGColor =[UIColor clearColor];
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:disvc];
+    //    WMPageController *pagec = [[WMPageController alloc]initWithViewControllerClasses:@[[RecommendTableViewController class],[CategoryTableViewController class],[RadioTableViewController class],[ListTableViewController class]] andTheirTitles:@[@"推荐",@"分类",@"广播",@"榜单"]];
+    
+    //    pagec.showOnNavigationBar=YES;
+    //    pagec.menuViewStyle=1;
+    //    pagec.menuHeight=45;
+    
     self.window.rootViewController =navi;
+    
     
     return YES;
 }

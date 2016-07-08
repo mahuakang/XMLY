@@ -20,7 +20,7 @@
     /** ============================== 网络状态监测 ================================ */
     
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+        // NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     

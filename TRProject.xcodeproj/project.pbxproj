@@ -30,11 +30,14 @@
 		A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D155A1D2D0CC700DBBFC2 /* CategoryTableViewController.m */; };
 		A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */; };
 		A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */; };
-		A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */; };
 		A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15661D2D125E00DBBFC2 /* NetManager.m */; };
 		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */; };
 		A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564481D2E4AA7004A504B /* WMPageNumModel.m */; };
 		A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */; };
+		A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644E1D2F48E4004A504B /* HorizontalItemCell.m */; };
+		A23564531D2F4967004A504B /* SpecialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564521D2F4967004A504B /* SpecialListCell.m */; };
+		A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564551D2F4BEE004A504B /* DiscorverPageController.m */; };
+		A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564591D2FA2BD004A504B /* CategoryCell.m */; };
 		C13F827F2EF9A3C404789040 /* libPods-TRProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AF26D7AD9D7A6080C6041D /* libPods-TRProject.a */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +89,6 @@
 		A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioTableViewController.m; sourceTree = "<group>"; };
 		A20D155F1D2D0CF300DBBFC2 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
-		A20D15621D2D0E7000DBBFC2 /* discoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discoverViewController.h; sourceTree = "<group>"; };
-		A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = discoverViewController.m; sourceTree = "<group>"; };
 		A20D15651D2D125E00DBBFC2 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		A20D15661D2D125E00DBBFC2 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetial.h; sourceTree = "<group>"; };
@@ -96,6 +97,14 @@
 		A23564481D2E4AA7004A504B /* WMPageNumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageNumModel.m; sourceTree = "<group>"; };
 		A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal3on1Cell.h; sourceTree = "<group>"; };
 		A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Horizontal3on1Cell.m; sourceTree = "<group>"; };
+		A235644D1D2F48E4004A504B /* HorizontalItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalItemCell.h; sourceTree = "<group>"; };
+		A235644E1D2F48E4004A504B /* HorizontalItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalItemCell.m; sourceTree = "<group>"; };
+		A23564511D2F4967004A504B /* SpecialListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialListCell.h; sourceTree = "<group>"; };
+		A23564521D2F4967004A504B /* SpecialListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialListCell.m; sourceTree = "<group>"; };
+		A23564541D2F4BEE004A504B /* DiscorverPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscorverPageController.h; sourceTree = "<group>"; };
+		A23564551D2F4BEE004A504B /* DiscorverPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscorverPageController.m; sourceTree = "<group>"; };
+		A23564581D2FA2BD004A504B /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
+		A23564591D2FA2BD004A504B /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +151,8 @@
 		38A1A32D1C74526C007EEEB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A20D15681D2D1D5B00DBBFC2 /* detial */,
-				A20D15581D2D0C9700DBBFC2 /* discover */,
+				A20D15681D2D1D5B00DBBFC2 /* 详情页 */,
+				A20D15581D2D0C9700DBBFC2 /* 发现 */,
 				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
 				A23564481D2E4AA7004A504B /* WMPageNumModel.m */,
 			);
@@ -172,8 +181,8 @@
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */,
-				A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */,
+				A23564571D2FA298004A504B /* 发现_分类 */,
+				A23564501D2F48EA004A504B /* 发现_推荐 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,9 +190,9 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A20D15621D2D0E7000DBBFC2 /* discoverViewController.h */,
-				A20D15631D2D0E7000DBBFC2 /* discoverViewController.m */,
-				A20D15571D2D0C6500DBBFC2 /* discover */,
+				A23564541D2F4BEE004A504B /* DiscorverPageController.h */,
+				A23564551D2F4BEE004A504B /* DiscorverPageController.m */,
+				A20D15571D2D0C6500DBBFC2 /* 发现 */,
 				38A1A3341C74526C007EEEB7 /* ViewController.h */,
 				38A1A3351C74526C007EEEB7 /* ViewController.m */,
 			);
@@ -254,7 +263,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A20D15571D2D0C6500DBBFC2 /* discover */ = {
+		A20D15571D2D0C6500DBBFC2 /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
 				A20D15541D2D0C5000DBBFC2 /* RecommendTableViewController.h */,
@@ -266,10 +275,10 @@
 				A20D155F1D2D0CF300DBBFC2 /* ListTableViewController.h */,
 				A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */,
 			);
-			name = discover;
+			name = "发现";
 			sourceTree = "<group>";
 		};
-		A20D15581D2D0C9700DBBFC2 /* discover */ = {
+		A20D15581D2D0C9700DBBFC2 /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
 				A20D15481D2D0BAB00DBBFC2 /* RecommendModel.h */,
@@ -281,24 +290,46 @@
 				A20D15511D2D0BEC00DBBFC2 /* ListModel.h */,
 				A20D15521D2D0BEC00DBBFC2 /* ListModel.m */,
 			);
-			name = discover;
+			name = "发现";
 			sourceTree = "<group>";
 		};
-		A20D15681D2D1D5B00DBBFC2 /* detial */ = {
+		A20D15681D2D1D5B00DBBFC2 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
-				A20D156F1D2D1EF200DBBFC2 /* categoryDetial */,
+				A20D156F1D2D1EF200DBBFC2 /* 专辑详情 */,
 			);
-			name = detial;
+			name = "详情页";
 			sourceTree = "<group>";
 		};
-		A20D156F1D2D1EF200DBBFC2 /* categoryDetial */ = {
+		A20D156F1D2D1EF200DBBFC2 /* 专辑详情 */ = {
 			isa = PBXGroup;
 			children = (
 				A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */,
 				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */,
 			);
-			name = categoryDetial;
+			name = "专辑详情";
+			sourceTree = "<group>";
+		};
+		A23564501D2F48EA004A504B /* 发现_推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */,
+				A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */,
+				A235644D1D2F48E4004A504B /* HorizontalItemCell.h */,
+				A235644E1D2F48E4004A504B /* HorizontalItemCell.m */,
+				A23564511D2F4967004A504B /* SpecialListCell.h */,
+				A23564521D2F4967004A504B /* SpecialListCell.m */,
+			);
+			name = "发现_推荐";
+			sourceTree = "<group>";
+		};
+		A23564571D2FA298004A504B /* 发现_分类 */ = {
+			isa = PBXGroup;
+			children = (
+				A23564581D2FA2BD004A504B /* CategoryCell.h */,
+				A23564591D2FA2BD004A504B /* CategoryCell.m */,
+			);
+			name = "发现_分类";
 			sourceTree = "<group>";
 		};
 		CA5127F42421C94949953D16 /* Frameworks */ = {
@@ -435,9 +466,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
+				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
 				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */,
+				A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
@@ -448,7 +481,6 @@
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
 				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
-				A20D15641D2D0E7000DBBFC2 /* discoverViewController.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
@@ -457,6 +489,8 @@
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
 				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,
 				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
+				A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */,
+				A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
