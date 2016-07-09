@@ -23,14 +23,10 @@
     [self setupGlobalConfig];
     DiscorverPageController *disvc= [DiscorverPageController new];
     disvc.showOnNavigationBar =YES;
-    disvc.menuViewStyle =0;
+    disvc.menuViewStyle =1;
+    disvc.menuHeight=45;
     disvc.menuBGColor =[UIColor clearColor];
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:disvc];
-    //    WMPageController *pagec = [[WMPageController alloc]initWithViewControllerClasses:@[[RecommendTableViewController class],[CategoryTableViewController class],[RadioTableViewController class],[ListTableViewController class]] andTheirTitles:@[@"推荐",@"分类",@"广播",@"榜单"]];
-    
-    //    pagec.showOnNavigationBar=YES;
-    //    pagec.menuViewStyle=1;
-    //    pagec.menuHeight=45;
     
     self.window.rootViewController =navi;
     

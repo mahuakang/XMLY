@@ -14,7 +14,6 @@
 		386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94A1CBB3C9600BC74F1 /* NSObject+Parse.m */; };
 		386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94D1CBB3CE200BC74F1 /* NSString+YX.m */; };
 		3899BC981C7D87620032ADEA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3899BC971C7D87620032ADEA /* CFNetwork.framework */; };
-		38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3351C74526C007EEEB7 /* ViewController.m */; };
 		38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3411C745317007EEEB7 /* NSObject+AFNetworking.m */; };
 		38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3451C745317007EEEB7 /* UIScrollView+Refresh.m */; };
 		38A641F81C8C225D00FCBF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F51C8C225D00FCBF96 /* Assets.xcassets */; };
@@ -38,6 +37,9 @@
 		A23564531D2F4967004A504B /* SpecialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564521D2F4967004A504B /* SpecialListCell.m */; };
 		A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564551D2F4BEE004A504B /* DiscorverPageController.m */; };
 		A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564591D2FA2BD004A504B /* CategoryCell.m */; };
+		A2E32A891D30C52C002226B2 /* HeadItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A881D30C52C002226B2 /* HeadItemCell.m */; };
+		A2E32A8C1D30C545002226B2 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A8B1D30C545002226B2 /* ListCell.m */; };
+		A2E32A8F1D30E292002226B2 /* bangdanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A8E1D30E292002226B2 /* bangdanCell.m */; };
 		C13F827F2EF9A3C404789040 /* libPods-TRProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AF26D7AD9D7A6080C6041D /* libPods-TRProject.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +59,6 @@
 		386BF94C1CBB3CE200BC74F1 /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
 		386BF94D1CBB3CE200BC74F1 /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
 		3899BC971C7D87620032ADEA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		38A1A3341C74526C007EEEB7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		38A1A3351C74526C007EEEB7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		38A1A3381C74527F007EEEB7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		38A1A33F1C7452F2007EEEB7 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		38A1A3401C745317007EEEB7 /* NSObject+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFNetworking.h"; sourceTree = "<group>"; };
@@ -105,6 +105,12 @@
 		A23564551D2F4BEE004A504B /* DiscorverPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscorverPageController.m; sourceTree = "<group>"; };
 		A23564581D2FA2BD004A504B /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		A23564591D2FA2BD004A504B /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		A2E32A871D30C52C002226B2 /* HeadItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadItemCell.h; sourceTree = "<group>"; };
+		A2E32A881D30C52C002226B2 /* HeadItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadItemCell.m; sourceTree = "<group>"; };
+		A2E32A8A1D30C545002226B2 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		A2E32A8B1D30C545002226B2 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		A2E32A8D1D30E292002226B2 /* bangdanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bangdanCell.h; sourceTree = "<group>"; };
+		A2E32A8E1D30E292002226B2 /* bangdanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bangdanCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,8 @@
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2E32A901D30E29E002226B2 /* 发现_榜单 */,
+				A2E32A861D30C50B002226B2 /* 发现_广播 */,
 				A23564571D2FA298004A504B /* 发现_分类 */,
 				A23564501D2F48EA004A504B /* 发现_推荐 */,
 			);
@@ -193,8 +201,6 @@
 				A23564541D2F4BEE004A504B /* DiscorverPageController.h */,
 				A23564551D2F4BEE004A504B /* DiscorverPageController.m */,
 				A20D15571D2D0C6500DBBFC2 /* 发现 */,
-				38A1A3341C74526C007EEEB7 /* ViewController.h */,
-				38A1A3351C74526C007EEEB7 /* ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -332,6 +338,26 @@
 			name = "发现_分类";
 			sourceTree = "<group>";
 		};
+		A2E32A861D30C50B002226B2 /* 发现_广播 */ = {
+			isa = PBXGroup;
+			children = (
+				A2E32A871D30C52C002226B2 /* HeadItemCell.h */,
+				A2E32A881D30C52C002226B2 /* HeadItemCell.m */,
+				A2E32A8A1D30C545002226B2 /* ListCell.h */,
+				A2E32A8B1D30C545002226B2 /* ListCell.m */,
+			);
+			name = "发现_广播";
+			sourceTree = "<group>";
+		};
+		A2E32A901D30E29E002226B2 /* 发现_榜单 */ = {
+			isa = PBXGroup;
+			children = (
+				A2E32A8D1D30E292002226B2 /* bangdanCell.h */,
+				A2E32A8E1D30E292002226B2 /* bangdanCell.m */,
+			);
+			name = "发现_榜单";
+			sourceTree = "<group>";
+		};
 		CA5127F42421C94949953D16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +492,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
+				A2E32A8C1D30C545002226B2 /* ListCell.m in Sources */,
+				A2E32A891D30C52C002226B2 /* HeadItemCell.m in Sources */,
 				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
@@ -479,7 +507,6 @@
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
 				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
-				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
@@ -490,6 +517,7 @@
 				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,
 				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
 				A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */,
+				A2E32A8F1D30E292002226B2 /* bangdanCell.m in Sources */,
 				A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

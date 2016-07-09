@@ -10,7 +10,7 @@
 
 @implementation ListModel
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"datas":[ListModelFocusimages class]};
+    return @{@"datas":[ListModelDatas class]};
 }
 @end
 @implementation ListModelFocusimages
@@ -36,7 +36,7 @@
 
 @implementation ListModelDatasList
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"Firstkresults":[ListModelDatasListFirstkresults class]};
+    return @{@"firstKResults":[ListModelDatasListFirstkresults class]};
 }
 @end
 

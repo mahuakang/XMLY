@@ -89,8 +89,11 @@
     }
 }
 //调整section间距
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return section==0?0:10;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.5;
+    return 1;
 }
 #pragma mark - LifeCycle 生命周期
 - (void)viewDidLoad{

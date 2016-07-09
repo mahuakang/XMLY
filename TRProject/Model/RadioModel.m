@@ -13,7 +13,7 @@
 @end
 @implementation RadioModelData
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"Categories":[RadioModelCategories class],
+    return @{@"categories":[RadioModelCategories class],
              @"topRadios":[RadioModelDataTopradios class],
              @"localRadios":[RadioModelCategoriesLocalradios class]};
 }

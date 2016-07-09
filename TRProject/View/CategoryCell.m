@@ -55,8 +55,11 @@
     ItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemCell" forIndexPath:indexPath];
     [cell.imageV setImageURL:self.itemDetial[indexPath.row].coverPath.yx_URL];
     cell.ItemLab.text = self.itemDetial[indexPath.row].title;
-    
+    cell.backgroundColor= [ UIColor whiteColor];
     return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(NSArray<CategoryModelList *> *)itemDetial{
@@ -71,10 +74,10 @@
 - (UICollectionView *)cv {
     if(_cv == nil) {
         UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
-        flowLayout.minimumLineSpacing =0;
-        flowLayout.minimumInteritemSpacing =0;
+        flowLayout.minimumLineSpacing =0.5;
+        flowLayout.minimumInteritemSpacing =0.3;
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        CGFloat width =[UIScreen mainScreen].bounds.size.width /2;
+        CGFloat width =[UIScreen mainScreen].bounds.size.width /2-0.25;
         CGFloat height = 50;
         flowLayout.itemSize = CGSizeMake(width, height);
         flowLayout.scrollDirection =UICollectionViewScrollDirectionVertical;
@@ -83,7 +86,7 @@
         _cv.delegate=self;
         _cv.dataSource=self;
         _cv.scrollEnabled =NO;
-        _cv.backgroundColor = [UIColor whiteColor];
+        _cv.backgroundColor = kRGBColor(230, 230, 230, 1);
         [_cv registerClass:[ItemCell class] forCellWithReuseIdentifier:@"ItemCell"];
         [_cv mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
