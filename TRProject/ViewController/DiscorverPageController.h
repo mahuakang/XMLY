@@ -9,5 +9,5 @@
 #import <WMPageController/WMPageController.h>
 
 @interface DiscorverPageController : WMPageController
-
+- (instancetype)init;
 @end

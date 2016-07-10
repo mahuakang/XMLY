@@ -50,7 +50,7 @@
 }
 #pragma mark - Tableview 代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4+self.recommendModelList.hotRecommends.list.count;
+    return 3+self.recommendModelList.hotRecommends.list.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
@@ -72,7 +72,7 @@
         default:
         {
             Horizontal3on1Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"3on1Cell" forIndexPath:indexPath];
-            cell = [cell initWithList:self.recommendModelList.hotRecommends.list[indexPath.section] andEdit:self.recommendModel.editorRecommendAlbums andCuccentSession:indexPath.section];
+            cell = [cell initWithList:self.recommendModelList.hotRecommends.list[indexPath.section==1?0:indexPath.section-3] andEdit:self.recommendModel.editorRecommendAlbums andCuccentSession:indexPath.section];
             return cell;
         }
     }

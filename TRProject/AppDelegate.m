@@ -9,10 +9,10 @@
 #import "AppDelegate.h"
 #import "NetManager.h"
 #import "DiscorverPageController.h"
-#import "RecommendTableViewController.h"
-#import "CategoryTableViewController.h"
-#import "RadioTableViewController.h"
-#import "ListTableViewController.h"
+#import "SubscibeController.h"
+#import "PlayerViewController.h"
+#import "DownloadListenController.h"
+#import "MineTableViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -21,14 +21,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //全局默认配置
     [self setupGlobalConfig];
-    DiscorverPageController *disvc= [DiscorverPageController new];
-    disvc.showOnNavigationBar =YES;
-    disvc.menuViewStyle =1;
-    disvc.menuHeight=45;
-    disvc.menuBGColor =[UIColor clearColor];
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:disvc];
     
-    self.window.rootViewController =navi;
+    DiscorverPageController *disC= [[DiscorverPageController alloc]init];
+    UINavigationController *disNavi = [[UINavigationController alloc]initWithRootViewController:disC];
+    
+    SubscibeController *subC = [[SubscibeController alloc]init];
+    UINavigationController *subNavi = [[UINavigationController alloc]initWithRootViewController:subC];
+    
+    DownloadListenController *downC = [[DownloadListenController alloc]init];
+    UINavigationController *downNavi = [[UINavigationController alloc]initWithRootViewController:downC];
+    
+    MineTableViewController *mineC = [[MineTableViewController alloc]init];
+    UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
+    
+    UITabBarController *tbc = [UITabBarController new];
+    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
+    
+    self.window.rootViewController =tbc;
     
     
     return YES;

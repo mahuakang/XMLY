@@ -10,7 +10,6 @@
 		382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 382C11821C7E8CDD00F34BB0 /* AppDelegate+System.m */; };
 		382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 382C97691C81D686003D1D51 /* UIView+HUD.m */; };
 		3851FBDE1D0F0A750054BDA0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3851FBDD1D0F0A750054BDA0 /* Info.plist */; };
-		3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851FBE01D0F0C110054BDA0 /* TRBaseViewModel.m */; };
 		386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94A1CBB3C9600BC74F1 /* NSObject+Parse.m */; };
 		386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94D1CBB3CE200BC74F1 /* NSString+YX.m */; };
 		3899BC981C7D87620032ADEA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3899BC971C7D87620032ADEA /* CFNetwork.framework */; };
@@ -21,6 +20,14 @@
 		38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F71C8C225D00FCBF96 /* Main.storyboard */; };
 		38ADA3B81C626AAF0093502F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3B71C626AAF0093502F /* main.m */; };
 		38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3BA1C626AAF0093502F /* AppDelegate.m */; };
+		A20406261D31EFAE003A9934 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20406251D31EFAE003A9934 /* PlayerViewController.m */; };
+		A20406291D31EFC9003A9934 /* MineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20406281D31EFC9003A9934 /* MineTableViewController.m */; };
+		A204062C1D31F002003A9934 /* DownloadListenController.m in Sources */ = {isa = PBXBuildFile; fileRef = A204062B1D31F002003A9934 /* DownloadListenController.m */; };
+		A204062F1D31F042003A9934 /* SubscibeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A204062E1D31F042003A9934 /* SubscibeController.m */; };
+		A20406321D320E7F003A9934 /* AlbumDetialListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20406311D320E7F003A9934 /* AlbumDetialListModel.m */; };
+		A20406371D321839003A9934 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20406361D321839003A9934 /* AlbumTableViewController.m */; };
+		A204063C1D321C46003A9934 /* AlbumHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A204063B1D321C46003A9934 /* AlbumHeadCell.m */; };
+		A204063F1D321C55003A9934 /* AlbumListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A204063E1D321C55003A9934 /* AlbumListCell.m */; };
 		A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15491D2D0BAB00DBBFC2 /* RecommendModel.m */; };
 		A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D154C1D2D0BCF00DBBFC2 /* CategoryModel.m */; };
 		A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D154F1D2D0BDF00DBBFC2 /* RadioModel.m */; };
@@ -30,7 +37,7 @@
 		A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D155D1D2D0CE200DBBFC2 /* RadioTableViewController.m */; };
 		A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */; };
 		A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15661D2D125E00DBBFC2 /* NetManager.m */; };
-		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */; };
+		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetialModel.m */; };
 		A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564481D2E4AA7004A504B /* WMPageNumModel.m */; };
 		A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */; };
 		A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644E1D2F48E4004A504B /* HorizontalItemCell.m */; };
@@ -52,8 +59,6 @@
 		382C97691C81D686003D1D51 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
 		3851ED221D0F081E0054BDA0 /* RequestPaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestPaths.h; sourceTree = "<group>"; };
 		3851FBDD1D0F0A750054BDA0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3851FBDF1D0F0C110054BDA0 /* TRBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRBaseViewModel.h; sourceTree = "<group>"; };
-		3851FBE01D0F0C110054BDA0 /* TRBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBaseViewModel.m; sourceTree = "<group>"; };
 		386BF9491CBB3C9600BC74F1 /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		386BF94A1CBB3C9600BC74F1 /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		386BF94C1CBB3CE200BC74F1 /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
@@ -73,6 +78,22 @@
 		38ADA3B91C626AAF0093502F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38ADA3BA1C626AAF0093502F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7635B9603C1F6424EC232246 /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
+		A20406241D31EFAE003A9934 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		A20406251D31EFAE003A9934 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		A20406271D31EFC9003A9934 /* MineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewController.h; sourceTree = "<group>"; };
+		A20406281D31EFC9003A9934 /* MineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewController.m; sourceTree = "<group>"; };
+		A204062A1D31F002003A9934 /* DownloadListenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadListenController.h; sourceTree = "<group>"; };
+		A204062B1D31F002003A9934 /* DownloadListenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadListenController.m; sourceTree = "<group>"; };
+		A204062D1D31F042003A9934 /* SubscibeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscibeController.h; sourceTree = "<group>"; };
+		A204062E1D31F042003A9934 /* SubscibeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscibeController.m; sourceTree = "<group>"; };
+		A20406301D320E7F003A9934 /* AlbumDetialListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetialListModel.h; sourceTree = "<group>"; };
+		A20406311D320E7F003A9934 /* AlbumDetialListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetialListModel.m; sourceTree = "<group>"; };
+		A20406351D321839003A9934 /* AlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewController.h; sourceTree = "<group>"; };
+		A20406361D321839003A9934 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
+		A204063A1D321C46003A9934 /* AlbumHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumHeadCell.h; sourceTree = "<group>"; };
+		A204063B1D321C46003A9934 /* AlbumHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumHeadCell.m; sourceTree = "<group>"; };
+		A204063D1D321C55003A9934 /* AlbumListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListCell.h; sourceTree = "<group>"; };
+		A204063E1D321C55003A9934 /* AlbumListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListCell.m; sourceTree = "<group>"; };
 		A20D15481D2D0BAB00DBBFC2 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
 		A20D15491D2D0BAB00DBBFC2 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		A20D154B1D2D0BCF00DBBFC2 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
@@ -91,8 +112,8 @@
 		A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		A20D15651D2D125E00DBBFC2 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		A20D15661D2D125E00DBBFC2 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
-		A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetial.h; sourceTree = "<group>"; };
-		A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetial.m; sourceTree = "<group>"; };
+		A20D15691D2D1E5B00DBBFC2 /* AlbumDetialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetialModel.h; sourceTree = "<group>"; };
+		A20D156A1D2D1E5B00DBBFC2 /* AlbumDetialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetialModel.m; sourceTree = "<group>"; };
 		A23564471D2E4AA7004A504B /* WMPageNumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageNumModel.h; sourceTree = "<group>"; };
 		A23564481D2E4AA7004A504B /* WMPageNumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageNumModel.m; sourceTree = "<group>"; };
 		A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal3on1Cell.h; sourceTree = "<group>"; };
@@ -159,8 +180,6 @@
 			children = (
 				A20D15681D2D1D5B00DBBFC2 /* 详情页 */,
 				A20D15581D2D0C9700DBBFC2 /* 发现 */,
-				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
-				A23564481D2E4AA7004A504B /* WMPageNumModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,10 +206,8 @@
 		38A1A3321C74526C007EEEB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A2E32A901D30E29E002226B2 /* 发现_榜单 */,
-				A2E32A861D30C50B002226B2 /* 发现_广播 */,
-				A23564571D2FA298004A504B /* 发现_分类 */,
-				A23564501D2F48EA004A504B /* 发现_推荐 */,
+				A20406381D321A32003A9934 /* 详情页 */,
+				A20406221D31EEE0003A9934 /* 发现 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,20 +215,14 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A23564541D2F4BEE004A504B /* DiscorverPageController.h */,
-				A23564551D2F4BEE004A504B /* DiscorverPageController.m */,
+				A20406331D3210A4003A9934 /* 详情页 */,
 				A20D15571D2D0C6500DBBFC2 /* 发现 */,
+				A204061E1D31EEB4003A9934 /* 订阅听 */,
+				A20406211D31EECD003A9934 /* 播放页 */,
+				A204061F1D31EEBE003A9934 /* 下载听 */,
+				A20406201D31EEC4003A9934 /* 我的 */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		38A1A3361C74526C007EEEB7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3851FBDF1D0F0C110054BDA0 /* TRBaseViewModel.h */,
-				3851FBE01D0F0C110054BDA0 /* TRBaseViewModel.m */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		38ADA3AA1C626AAF0093502F = {
@@ -244,7 +255,6 @@
 				38A1A32F1C74526C007EEEB7 /* Resource */,
 				38A1A3321C74526C007EEEB7 /* View */,
 				38A1A3331C74526C007EEEB7 /* ViewController */,
-				38A1A3361C74526C007EEEB7 /* ViewModel */,
 				38ADA3B61C626AAF0093502F /* Supporting Files */,
 			);
 			path = TRProject;
@@ -269,9 +279,102 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A204061E1D31EEB4003A9934 /* 订阅听 */ = {
+			isa = PBXGroup;
+			children = (
+				A204062D1D31F042003A9934 /* SubscibeController.h */,
+				A204062E1D31F042003A9934 /* SubscibeController.m */,
+			);
+			name = "订阅听";
+			sourceTree = "<group>";
+		};
+		A204061F1D31EEBE003A9934 /* 下载听 */ = {
+			isa = PBXGroup;
+			children = (
+				A204062A1D31F002003A9934 /* DownloadListenController.h */,
+				A204062B1D31F002003A9934 /* DownloadListenController.m */,
+			);
+			name = "下载听";
+			sourceTree = "<group>";
+		};
+		A20406201D31EEC4003A9934 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				A20406271D31EFC9003A9934 /* MineTableViewController.h */,
+				A20406281D31EFC9003A9934 /* MineTableViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		A20406211D31EECD003A9934 /* 播放页 */ = {
+			isa = PBXGroup;
+			children = (
+				A20406241D31EFAE003A9934 /* PlayerViewController.h */,
+				A20406251D31EFAE003A9934 /* PlayerViewController.m */,
+			);
+			name = "播放页";
+			sourceTree = "<group>";
+		};
+		A20406221D31EEE0003A9934 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				A23564501D2F48EA004A504B /* 发现_推荐 */,
+				A23564571D2FA298004A504B /* 发现_分类 */,
+				A2E32A861D30C50B002226B2 /* 发现_广播 */,
+				A2E32A901D30E29E002226B2 /* 发现_榜单 */,
+			);
+			name = "发现";
+			sourceTree = "<group>";
+		};
+		A20406231D31EEF6003A9934 /* 听单详情 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "听单详情";
+			sourceTree = "<group>";
+		};
+		A20406331D3210A4003A9934 /* 详情页 */ = {
+			isa = PBXGroup;
+			children = (
+				A20406351D321839003A9934 /* AlbumTableViewController.h */,
+				A20406361D321839003A9934 /* AlbumTableViewController.m */,
+			);
+			name = "详情页";
+			sourceTree = "<group>";
+		};
+		A20406341D32113D003A9934 /* 分页详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
+				A23564481D2E4AA7004A504B /* WMPageNumModel.m */,
+			);
+			name = "分页详情";
+			sourceTree = "<group>";
+		};
+		A20406381D321A32003A9934 /* 详情页 */ = {
+			isa = PBXGroup;
+			children = (
+				A20406391D321A3C003A9934 /* 专辑详情 */,
+			);
+			name = "详情页";
+			sourceTree = "<group>";
+		};
+		A20406391D321A3C003A9934 /* 专辑详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A204063A1D321C46003A9934 /* AlbumHeadCell.h */,
+				A204063B1D321C46003A9934 /* AlbumHeadCell.m */,
+				A204063D1D321C55003A9934 /* AlbumListCell.h */,
+				A204063E1D321C55003A9934 /* AlbumListCell.m */,
+			);
+			name = "专辑详情";
+			sourceTree = "<group>";
+		};
 		A20D15571D2D0C6500DBBFC2 /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				A23564541D2F4BEE004A504B /* DiscorverPageController.h */,
+				A23564551D2F4BEE004A504B /* DiscorverPageController.m */,
 				A20D15541D2D0C5000DBBFC2 /* RecommendTableViewController.h */,
 				A20D15551D2D0C5000DBBFC2 /* RecommendTableViewController.m */,
 				A20D15591D2D0CC700DBBFC2 /* CategoryTableViewController.h */,
@@ -302,6 +405,8 @@
 		A20D15681D2D1D5B00DBBFC2 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
+				A20406341D32113D003A9934 /* 分页详情 */,
+				A20406231D31EEF6003A9934 /* 听单详情 */,
 				A20D156F1D2D1EF200DBBFC2 /* 专辑详情 */,
 			);
 			name = "详情页";
@@ -310,8 +415,10 @@
 		A20D156F1D2D1EF200DBBFC2 /* 专辑详情 */ = {
 			isa = PBXGroup;
 			children = (
-				A20D15691D2D1E5B00DBBFC2 /* AlbumDetial.h */,
-				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetial.m */,
+				A20D15691D2D1E5B00DBBFC2 /* AlbumDetialModel.h */,
+				A20D156A1D2D1E5B00DBBFC2 /* AlbumDetialModel.m */,
+				A20406301D320E7F003A9934 /* AlbumDetialListModel.h */,
+				A20406311D320E7F003A9934 /* AlbumDetialListModel.m */,
 			);
 			name = "专辑详情";
 			sourceTree = "<group>";
@@ -494,26 +601,33 @@
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				A2E32A8C1D30C545002226B2 /* ListCell.m in Sources */,
 				A2E32A891D30C52C002226B2 /* HeadItemCell.m in Sources */,
+				A204062F1D31F042003A9934 /* SubscibeController.m in Sources */,
 				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
-				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetial.m in Sources */,
+				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetialModel.m in Sources */,
 				A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */,
+				A20406261D31EFAE003A9934 /* PlayerViewController.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
+				A20406291D31EFC9003A9934 /* MineTableViewController.m in Sources */,
 				A20D15531D2D0BEC00DBBFC2 /* ListModel.m in Sources */,
+				A204063F1D321C55003A9934 /* AlbumListCell.m in Sources */,
+				A204063C1D321C46003A9934 /* AlbumHeadCell.m in Sources */,
 				A20D15561D2D0C5000DBBFC2 /* RecommendTableViewController.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
 				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
-				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
 				A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */,
 				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
+				A20406371D321839003A9934 /* AlbumTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A20406321D320E7F003A9934 /* AlbumDetialListModel.m in Sources */,
+				A204062C1D31F002003A9934 /* DownloadListenController.m in Sources */,
 				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,
 				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
 				A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */,

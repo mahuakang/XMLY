@@ -12,7 +12,10 @@
 #import "RadioModel.h"
 #import "ListModel.h"
 #import "WMPageNumModel.h"
+#import "AlbumDetialModel.h"
+#import "AlbumDetialListModel.h"
 @implementation NetManager
+
 + (instancetype)getDetialPageNumByCategory:(NSString *)categoryName SecondCategory:(NSString *)SecondName categoryType:(NSString *)categoryType completionHandler:(void (^)(id, NSError *))completionHandler{
     NSString *path = [NSString stringWithFormat:wmDetialPath,categoryName,SecondName,categoryType];
     NSString *Enpath = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -20,6 +23,7 @@
         !completionHandler?:completionHandler([WMPageNumModel parseJSON:jsonObject],error);
     }];
 }
+
 +(instancetype)getRecommendList:(void (^)(id, NSError *))completionHandler listcompletionHandler:(void(^)(id model,NSError*error))listcompletionHandler{
     [self GET:RecommendListPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !listcompletionHandler?:listcompletionHandler([RecommendModelList parseJSON:jsonObject],error);
@@ -28,19 +32,34 @@
         !completionHandler?:completionHandler([RecommendModel parseJSON:jsonObject],error);
     }];
 }
+
 + (instancetype)getCategoryList:(void (^)(id, NSError *))completionHandler{
     return [self GET:CatrgoryPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !completionHandler?:completionHandler([CategoryModel parseJSON:jsonObject],error);
     }];
 }
+
 + (instancetype)getRadioList:(void (^)(id, NSError *))completionHandler{
     return [self GET:RadioPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !completionHandler?:completionHandler([RadioModel parseJSON:jsonObject],error);
     }];
 }
+
 + (instancetype)getList:(void (^)(id, NSError *))completionHandler{
     return [self GET:ListPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !completionHandler?:completionHandler([ListModel parseJSON:jsonObject],error);
     }];
 }
+
++ (instancetype)getAlbumDetial:(NSInteger)albumId statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType ListcompletionHandler:(void (^)(id, NSError *))ListcompletionHandler completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *detialListPath = [NSString stringWithFormat:AblumDetialPathRight,albumId,albumId,statMoudle,pageType];
+    NSString *detialPath = [NSString stringWithFormat:AblumDetialPathLeft,albumId,statMoudle,pageType];
+    [self GET:[detialListPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !ListcompletionHandler?:ListcompletionHandler([AlbumDetialListModel parseJSON:jsonObject],error);
+    }];
+    return [self GET:[detialPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([AlbumDetialModel parseJSON:jsonObject],error);
+    }];
+}
+
 @end

@@ -12,9 +12,24 @@
 #import "RadioTableViewController.h"
 #import "ListTableViewController.h"
 @implementation DiscorverPageController
+#pragma mark -  初始化
+- (instancetype)init{
+    self= [super init];
+    if (self) {
+        self.showOnNavigationBar =YES;
+        self.menuViewStyle =1;
+        self.menuHeight=45;
+        self.menuBGColor =[UIColor clearColor];
+        self.tabBarItem.image = [UIImage imageNamed:@"tabbar_find_n"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_find_h"];
+    }
+    return self;
+}
+#pragma mark - 方法
 - (NSArray<NSString *> *)titles{
     return @[@"推荐",@"分类",@"广播",@"榜单"];
 }
+#pragma mark -  代理方法
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController{
     return self.titles.count;
 }

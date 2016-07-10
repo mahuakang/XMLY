@@ -7,6 +7,7 @@
 //
 
 #import "Horizontal3on1Cell.h"
+#import "AlbumTableViewController.h"
 /*=============ThreeCell begin======================*/
 @interface ThreeCell :UICollectionViewCell
 @property (nonatomic,strong)UIImageView *imageview;
@@ -85,6 +86,18 @@
         cell.subLab.text = list.title;
     }
     return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (_currentSession ==1) {
+        RecommendModeleditorRecommendAlbumsList *list = self.editorRecommend.list[indexPath.row];
+        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:list.albumId statMoudle:self.editorRecommend.title pageType:@"发现_推荐"];
+        [self.viewController.navigationController pushViewController:atvc animated:YES];
+    }else{
+        RecommendModelListHotrecommendsListList *list =self.listDetial.list[indexPath.row];
+        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:list.albumId statMoudle:self.listDetial.title pageType:@"发现_推荐"];
+        [self.viewController.navigationController pushViewController:atvc animated:YES];
+    }
+    
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(RecommendModelListHotrecommendsList  *)listDetial andEdit:(RecommendModelEditorrecommendalbums *)editorRecommend andCuccentSession:(NSInteger)currentSession;{
