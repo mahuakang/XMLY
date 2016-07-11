@@ -89,12 +89,10 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (_currentSession ==1) {
-        RecommendModeleditorRecommendAlbumsList *list = self.editorRecommend.list[indexPath.row];
-        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:list.albumId statMoudle:self.editorRecommend.title pageType:@"发现_推荐"];
+        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:self.editorRecommend.list[indexPath.row].albumId statMoudle:self.editorRecommend.title pageType:@"发现_推荐"];
         [self.viewController.navigationController pushViewController:atvc animated:YES];
     }else{
-        RecommendModelListHotrecommendsListList *list =self.listDetial.list[indexPath.row];
-        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:list.albumId statMoudle:self.listDetial.title pageType:@"发现_推荐"];
+        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:self.listDetial.list[indexPath.row].albumId statMoudle:self.listDetial.title pageType:@"发现_推荐"];
         [self.viewController.navigationController pushViewController:atvc animated:YES];
     }
     

@@ -23,6 +23,8 @@
 
 #define AblumDetialPathLeft @"http://mobile.ximalaya.com/mobile/v1/album/detail?albumId=4371702&device=iphone&statEvent=pageview/album@%ld&statModule=%@&statPage=tab@%@&statPosition=1"
 
+#define ListenListPath @"http://mobile.ximalaya.com/m/subject_detail?device=android&id=%ld&statEvent=pageview/subject@%ld&statModule=%@&statPage=tab@%@&statPosition=1"
+
 #define wmDetialPath @"http://mobile.ximalaya.com/mobile/discovery/v1/category/tagsWithoutCover?categoryId=4&channel=and-d5&contentType=album&device=android&statEvent=pageview/category@%@&statModule=%@&statPage=tab@发现_%@&version=5.4.9"
 
 

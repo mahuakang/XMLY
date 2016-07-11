@@ -19,9 +19,11 @@
         self.showOnNavigationBar =YES;
         self.menuViewStyle =1;
         self.menuHeight=45;
+        self.menuItemWidth=kScreenW/4;
         self.menuBGColor =[UIColor clearColor];
         self.tabBarItem.image = [UIImage imageNamed:@"tabbar_find_n"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_find_h"];
+        
     }
     return self;
 }

@@ -21,4 +21,5 @@
 + (instancetype)getList:(void(^)(id model,NSError*error))completionHandler;
 
 + (instancetype)getAlbumDetial:(NSInteger)albumId statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType ListcompletionHandler:(void(^)(id model,NSError*error))ListcompletionHandler completionHandler:(void(^)(id model,NSError*error))completionHandler;
++ (instancetype)getListenListList:(NSInteger)listenListId statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType completionHandler:(void(^)(id model,NSError*error))completionHandler;
 @end

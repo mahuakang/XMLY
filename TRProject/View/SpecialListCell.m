@@ -7,7 +7,7 @@
 //
 
 #import "SpecialListCell.h"
-
+#import "ListenListTableViewController.h"
 /*===============================specialCell begin======================*/
 @interface specialCell : UITableViewCell
 @property (nonatomic,strong)UIImageView *imagev;
@@ -93,6 +93,10 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ListenListTableViewController *lltvc = [[ListenListTableViewController alloc]initWithList:self.specialColumn.list[indexPath.row].specialId statMoudle:self.specialColumn.title pageType:@"发现_推荐"];
+    [self.viewController.navigationController pushViewController:lltvc animated:YES];
 }
 #pragma mark - LifeCycle 生命周期
 - (instancetype)initWithColumn:(RecommendModelSpecialcolumn *)specialcColumn{

@@ -36,7 +36,6 @@
     }else{
         AlbumListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumListCell" forIndexPath:indexPath];
         cell = [cell initWithList:self.adlModel.data.tracks.list[indexPath.row]];
-        
         return cell;
     }
 }

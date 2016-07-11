@@ -22,7 +22,6 @@
     if (self) {
         _list = list;
         [self.imageV setImageURL:_list.coverLarge.yx_URL];
-        NSLog(@"%@",_list.smallLogo);
         self.titleLab.text = list.title;
         self.playTimes.text = _list.playtimes>10000?[NSString stringWithFormat:@"%.1f万",_list.playtimes/10000.0]:@(_list.playtimes).stringValue;
         self.duration.text = _list.duration>60
