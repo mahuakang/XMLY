@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ListenListModel.h"
-@interface ListenListHeadCell : UITableViewCell
+@interface ListenListHeadCell:UITableViewCell
 @property (nonatomic,strong)ListenListModelInfo *info;
 - (instancetype)initWithList:(ListenListModelInfo *)info;
 @end

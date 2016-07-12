@@ -15,15 +15,10 @@
 #import "AlbumDetialModel.h"
 #import "AlbumDetialListModel.h"
 #import "ListenListModel.h"
+#import "WMFirstPageModel.h"
+#import "WMOtherPageModel.h"
 @implementation NetManager
-//待定
-+ (instancetype)getDetialPageNumByCategory:(NSString *)categoryName SecondCategory:(NSString *)SecondName categoryType:(NSString *)categoryType completionHandler:(void (^)(id, NSError *))completionHandler{
-    NSString *path = [NSString stringWithFormat:wmDetialPath,categoryName,SecondName,categoryType];
-    NSString *Enpath = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [self GET:Enpath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
-        !completionHandler?:completionHandler([WMPageNumModel parseJSON:jsonObject],error);
-    }];
-}
+
 //发现_推荐
 +(instancetype)getRecommendList:(void (^)(id, NSError *))completionHandler listcompletionHandler:(void(^)(id model,NSError*error))listcompletionHandler{
     [self GET:RecommendListPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
@@ -69,4 +64,28 @@
         !completionHandler?:completionHandler([ListenListModel parseJSON:jsonObject],error);
     }];
 }
+//分页详情数量
++ (instancetype)getWmPageNumById:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path = [NSString stringWithFormat:WmNumPath,Id,statMoudle,statMoudle,pageType];
+    return [self GET:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([WMPageNumModel parseJSON:jsonObject],error);
+    }];
+}
+//分页详情的第一页
++ (instancetype)getWMFirstPageById:(NSInteger)Id completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path =[NSString stringWithFormat:WmFirstPage,Id];
+    return [self GET:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([WMFirstPageModel parseJSON:jsonObject],error);
+    }];
+}
+//分页详情其他页
++ (instancetype)getWMOtherPageById:(NSInteger)Id tagName:(NSString *)tagName completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path = [NSString stringWithFormat:WmOtherPage,Id,tagName];
+    return [self GET:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([WMOtherPageModel parseJSON:jsonObject],error);
+    }];
+}
+
+
+
 @end

@@ -7,10 +7,14 @@
 //
 
 #import "CategoryCell.h"
+#import "CategoryDetialPageController.h"
+#import "NetManager.h"
+#import "WMPageNumModel.h"
 /*==============================ItemCell begin=========================*/
 @interface ItemCell : UICollectionViewCell
 @property (nonatomic,strong)UILabel *ItemLab;
 @property (nonatomic,strong)UIImageView *imageV;
+
 @end
 @implementation ItemCell
 #pragma mark - 懒加载
@@ -45,6 +49,7 @@
 /*=============================    ItemCell end==========================*/
 @interface CategoryCell()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView *cv;
+@property (nonatomic,strong)WMPageNumModel *mod;
 @end
 @implementation CategoryCell
 #pragma mark - collectionView 代理方法
@@ -59,6 +64,9 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:self.itemDetial[indexPath.row].Id statMoudle:self.itemDetial[indexPath.row].title pageType:@"发现_分类"];
+    [self.viewController.navigationController pushViewController:wmpage animated:YES];
     
 }
 #pragma mark -  初始化

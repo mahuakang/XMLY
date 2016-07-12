@@ -9,12 +9,7 @@
 #import "SpecialListCell.h"
 #import "ListenListTableViewController.h"
 /*===============================specialCell begin======================*/
-@interface specialCell : UITableViewCell
-@property (nonatomic,strong)UIImageView *imagev;
-@property (nonatomic,strong)UILabel *topLab;
-@property (nonatomic,strong)UILabel *midLab;
-@property (nonatomic,strong)UILabel *bottomLab;
-@end
+
 @implementation specialCell
 #pragma mark - 懒加载
 - (UILabel *)bottomLab {
@@ -89,6 +84,7 @@
     cell.topLab.text=self.specialColumn.list[indexPath.row].title;
     cell.midLab.text = self.specialColumn.list[indexPath.row].subtitle;
     cell.bottomLab.text  = self.specialColumn.list[indexPath.row].footnote;
+    
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

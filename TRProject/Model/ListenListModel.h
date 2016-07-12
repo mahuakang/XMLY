@@ -64,11 +64,33 @@
 
 @property (nonatomic, copy) NSString *albumCoverUrl290;
 
+//another type
+@property (nonatomic,assign)NSInteger commentsCounts;
+
+@property (nonatomic,copy)NSString *coverSmall;
+
+@property (nonatomic,assign)long long createdAt;
+
+@property (nonatomic,assign)NSInteger duration;
+
+@property (nonatomic,assign)NSInteger favoritesCounts;
+
+@property (nonatomic,copy)NSString *nickname;
+
+@property (nonatomic,copy)NSString *playPath32;
+
+@property (nonatomic,copy)NSString *playPath64;
+
+@property (nonatomic,assign)NSInteger sharesCounts;
+
+@property (nonatomic,assign)NSInteger uid;
 @end
 
 @interface ListenListModelListOrigin : NSObject
 
 @property (nonatomic, copy) NSString *title;
+
+@property (nonatomic,copy)NSString *coverSmall;
 
 @property (nonatomic, copy) NSString *albumCoverUrl290;
 

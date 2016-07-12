@@ -22,7 +22,6 @@
     //全局默认配置
     [self setupGlobalConfig];
     
-
     DiscorverPageController *disC= [[DiscorverPageController alloc]init];
     UINavigationController *disNavi = [[UINavigationController alloc]initWithRootViewController:disC];
     disNavi.navigationBar.tintColor=[UIColor redColor];

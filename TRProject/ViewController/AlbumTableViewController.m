@@ -39,6 +39,7 @@
         return cell;
     }
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return indexPath.section==0?200:80;
 }
@@ -52,8 +53,9 @@
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(NSInteger)albumUid statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType{
-    self = [super init];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        
         _albumUid = albumUid;
         _statMoudle = statMoudle;
         _pageType = pageType;

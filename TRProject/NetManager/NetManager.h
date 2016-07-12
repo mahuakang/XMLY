@@ -10,8 +10,6 @@
 
 @interface NetManager : NSObject
 
-+ (instancetype)getDetialPageNumByCategory:(NSString *)categoryName SecondCategory:(NSString *)SecondName categoryType:(NSString*)categoryType completionHandler:(void(^)(id model,NSError*error))completionHandler;
-
 + (instancetype)getRecommendList:(void(^)(id model,NSError*error))completionHandler listcompletionHandler:(void(^)(id model,NSError*error))listcompletionHandler;
 
 + (instancetype)getCategoryList:(void(^)(id model,NSError*error))completionHandler;
@@ -22,4 +20,10 @@
 
 + (instancetype)getAlbumDetial:(NSInteger)albumId statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType ListcompletionHandler:(void(^)(id model,NSError*error))ListcompletionHandler completionHandler:(void(^)(id model,NSError*error))completionHandler;
 + (instancetype)getListenListList:(NSInteger)listenListId statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getWmPageNumById:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getWMFirstPageById:(NSInteger)Id completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getWMOtherPageById:(NSInteger)Id tagName:(NSString *)tagName completionHandler:(void(^)(id model,NSError*error))completionHandler;
 @end

@@ -38,6 +38,11 @@
 		A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15601D2D0CF300DBBFC2 /* ListTableViewController.m */; };
 		A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D15661D2D125E00DBBFC2 /* NetManager.m */; };
 		A20D156B1D2D1E5B00DBBFC2 /* AlbumDetialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D156A1D2D1E5B00DBBFC2 /* AlbumDetialModel.m */; };
+		A20D32171D34C36F00418EEC /* WMFirstPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D32161D34C36F00418EEC /* WMFirstPageModel.m */; };
+		A20D321A1D34C37E00418EEC /* WMOtherPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D32191D34C37E00418EEC /* WMOtherPageModel.m */; };
+		A20D321D1D34C3B500418EEC /* CategoryDetialPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D321C1D34C3B500418EEC /* CategoryDetialPageController.m */; };
+		A20D32201D34C3DA00418EEC /* FirstPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D321F1D34C3DA00418EEC /* FirstPageTableViewController.m */; };
+		A20D32231D34C3E900418EEC /* OtherPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */; };
 		A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564481D2E4AA7004A504B /* WMPageNumModel.m */; };
 		A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */; };
 		A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644E1D2F48E4004A504B /* HorizontalItemCell.m */; };
@@ -118,6 +123,16 @@
 		A20D15661D2D125E00DBBFC2 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A20D15691D2D1E5B00DBBFC2 /* AlbumDetialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetialModel.h; sourceTree = "<group>"; };
 		A20D156A1D2D1E5B00DBBFC2 /* AlbumDetialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetialModel.m; sourceTree = "<group>"; };
+		A20D32151D34C36F00418EEC /* WMFirstPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMFirstPageModel.h; sourceTree = "<group>"; };
+		A20D32161D34C36F00418EEC /* WMFirstPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMFirstPageModel.m; sourceTree = "<group>"; };
+		A20D32181D34C37E00418EEC /* WMOtherPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMOtherPageModel.h; sourceTree = "<group>"; };
+		A20D32191D34C37E00418EEC /* WMOtherPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMOtherPageModel.m; sourceTree = "<group>"; };
+		A20D321B1D34C3B500418EEC /* CategoryDetialPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetialPageController.h; sourceTree = "<group>"; };
+		A20D321C1D34C3B500418EEC /* CategoryDetialPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetialPageController.m; sourceTree = "<group>"; };
+		A20D321E1D34C3DA00418EEC /* FirstPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageTableViewController.h; sourceTree = "<group>"; };
+		A20D321F1D34C3DA00418EEC /* FirstPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTableViewController.m; sourceTree = "<group>"; };
+		A20D32211D34C3E900418EEC /* OtherPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherPageTableViewController.h; sourceTree = "<group>"; };
+		A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherPageTableViewController.m; sourceTree = "<group>"; };
 		A23564471D2E4AA7004A504B /* WMPageNumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageNumModel.h; sourceTree = "<group>"; };
 		A23564481D2E4AA7004A504B /* WMPageNumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageNumModel.m; sourceTree = "<group>"; };
 		A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal3on1Cell.h; sourceTree = "<group>"; };
@@ -362,6 +377,10 @@
 			children = (
 				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
 				A23564481D2E4AA7004A504B /* WMPageNumModel.m */,
+				A20D32151D34C36F00418EEC /* WMFirstPageModel.h */,
+				A20D32161D34C36F00418EEC /* WMFirstPageModel.m */,
+				A20D32181D34C37E00418EEC /* WMOtherPageModel.h */,
+				A20D32191D34C37E00418EEC /* WMOtherPageModel.m */,
 			);
 			name = "分页详情";
 			sourceTree = "<group>";
@@ -501,6 +520,12 @@
 		A2C6EC2D1D33A7440000E250 /* 分页详情 */ = {
 			isa = PBXGroup;
 			children = (
+				A20D321B1D34C3B500418EEC /* CategoryDetialPageController.h */,
+				A20D321C1D34C3B500418EEC /* CategoryDetialPageController.m */,
+				A20D321E1D34C3DA00418EEC /* FirstPageTableViewController.h */,
+				A20D321F1D34C3DA00418EEC /* FirstPageTableViewController.m */,
+				A20D32211D34C3E900418EEC /* OtherPageTableViewController.h */,
+				A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */,
 			);
 			name = "分页详情";
 			sourceTree = "<group>";
@@ -658,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20D32201D34C3DA00418EEC /* FirstPageTableViewController.m in Sources */,
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				A2E32A8C1D30C545002226B2 /* ListCell.m in Sources */,
 				A2E32A891D30C52C002226B2 /* HeadItemCell.m in Sources */,
@@ -665,6 +691,8 @@
 				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A2C6EC301D33A7CF0000E250 /* ListenListModel.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
+				A20D321A1D34C37E00418EEC /* WMOtherPageModel.m in Sources */,
+				A20D32171D34C36F00418EEC /* WMFirstPageModel.m in Sources */,
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
 				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetialModel.m in Sources */,
 				A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */,
@@ -682,6 +710,7 @@
 				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
 				A2C6EC361D33AB8E0000E250 /* ListenListListCell.m in Sources */,
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
+				A20D321D1D34C3B500418EEC /* CategoryDetialPageController.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
@@ -689,6 +718,7 @@
 				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
 				A20406371D321839003A9934 /* AlbumTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A20D32231D34C3E900418EEC /* OtherPageTableViewController.m in Sources */,
 				A20406321D320E7F003A9934 /* AlbumDetialListModel.m in Sources */,
 				A204062C1D31F002003A9934 /* DownloadListenController.m in Sources */,
 				A20D154A1D2D0BAB00DBBFC2 /* RecommendModel.m in Sources */,

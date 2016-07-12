@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListenListModel.h"
 
 @interface ListenListListCell : UITableViewCell
+@property (nonatomic,strong)UIImageView *imageV;
+@property (nonatomic,strong)UILabel *titleLab;
+@property (nonatomic,strong)UILabel *midLab;
+@property (nonatomic,strong)UILabel *playCountsLab;
+@property (nonatomic,strong)UILabel *tracksCounts;
+
+@property (nonatomic,strong)ListenListModelList *list;
+- (instancetype)initWithList:(ListenListModelList *)list;
 
 @end

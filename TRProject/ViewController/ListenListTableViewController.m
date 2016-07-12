@@ -11,7 +11,8 @@
 #import "ListenListModel.h"
 #import "ListenListHeadCell.h"
 #import "ListenListListCell.h"
-
+#import "AlbumListCell.h"
+#import "AlbumTableViewController.h"
 @interface ListenListTableViewController ()
 @property (nonatomic,strong)ListenListModel *listenListModel;
 @end
@@ -30,16 +31,41 @@
         cell = [cell initWithList:_listenListModel.info];
         return cell;
     }else{
-        ListenListListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListenListListCell" forIndexPath:indexPath];
-        return cell;
+        if (_listenListModel.info.contentType==2) {
+            AlbumListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumListCell" forIndexPath:indexPath];
+            ListenListModelList *list =_listenListModel.list[indexPath.row];
+            [cell.imageV setImageURL:list.coverSmall.yx_URL];
+            cell.titleLab.text = list.title;
+            cell.playTimesLab.text = list.playsCounts>10000?[NSString stringWithFormat:@"%.1f万", list.playsCounts/10000.0]:@( list.playsCounts).stringValue;
+            cell.duration.text = list.duration>60
+            ?[NSString stringWithFormat:@"%@:%@",list.duration/60>10?@(list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration/60],list.duration%60>10?@(list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration%60]]
+            :[NSString stringWithFormat:@"00:%ld",list.duration];
+            cell.commentsLab.text = @(list.commentsCounts).stringValue;
+            return cell;
+        }else if(_listenListModel.info.contentType==1){
+            ListenListListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListenListListCell" forIndexPath:indexPath];
+            cell = [cell initWithList:_listenListModel.list[indexPath.row]];
+            return cell;
+        }
+    }
+    return nil;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==1) {
+        if (_listenListModel.info.contentType==2) {
+            
+        }else{
+            AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:self.listenListModel.list[indexPath.row].Id statMoudle:@"听单详情" pageType:@(_listenListModel.info.specialId).stringValue];
+            [self.navigationController pushViewController:atvc animated:YES];
+        }
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return indexPath.section==0?300:100;
+    return indexPath.section==0?400:100;
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType{
-    self = [super init];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _Id = Id;
         _statMoudle = statMoudle;
@@ -52,6 +78,7 @@
     [super viewDidLoad];
     [self.tableView registerClass:[ListenListHeadCell class] forCellReuseIdentifier:@"ListenListHeadCell"];
     [self.tableView registerClass:[ListenListListCell  class] forCellReuseIdentifier:@"ListenListListCell"];
+    [self.tableView registerClass:[AlbumListCell  class] forCellReuseIdentifier:@"AlbumListCell"];
     [NetManager getListenListList:_Id statMoudle:_statMoudle pageType:_pageType completionHandler:^(id model, NSError *error) {
         _listenListModel = model;
         [self.tableView reloadData];

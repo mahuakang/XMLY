@@ -23,11 +23,13 @@
 
 #define AblumDetialPathLeft @"http://mobile.ximalaya.com/mobile/v1/album/detail?albumId=4371702&device=iphone&statEvent=pageview/album@%ld&statModule=%@&statPage=tab@%@&statPosition=1"
 
-#define ListenListPath @"http://mobile.ximalaya.com/m/subject_detail?device=android&id=%ld&statEvent=pageview/subject@%ld&statModule=%@&statPage=tab@%@&statPosition=1"
+#define ListenListPath @"http://mobile.ximalaya.com/m/subject_detail?device=iphone&id=%ld&statEvent=pageview/subject@%ld&statModule=%@&statPage=tab@%@&statPosition=1"
 
-#define wmDetialPath @"http://mobile.ximalaya.com/mobile/discovery/v1/category/tagsWithoutCover?categoryId=4&channel=and-d5&contentType=album&device=android&statEvent=pageview/category@%@&statModule=%@&statPage=tab@发现_%@&version=5.4.9"
+#define WmNumPath @"http://mobile.ximalaya.com/mobile/discovery/v1/category/tagsWithoutCover?categoryId=%ld&channel=and-d5&contentType=album&device=iphone&statEvent=pageview/category@%@&statModule=%@&statPage=tab@%@&version=5.4.9"
 
+#define WmOtherPage @"http://mobile.ximalaya.com/mobile/discovery/v1/category/album?calcDimension=hot&categoryId=%ld&device=iphone&pageId=1&pageSize=20&status=0&tagName=%@"
 
+#define WmFirstPage @"http://mobile.ximalaya.com/mobile/discovery/v2/category/recommends?categoryId=%ld&contentType=album&device=iphone&version=5.4.9"
 
 #endif /* RequestPaths_h */
 
