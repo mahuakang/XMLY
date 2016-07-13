@@ -47,6 +47,7 @@
     if (indexPath.section ==1) {
         AVPlayerViewController *avc = [AVPlayerViewController new];
         avc.player = [AVPlayer playerWithURL:self.adlModel.data.tracks.list[indexPath.row].playUrl64.yx_URL];
+        
         [avc.player play];
         [self presentViewController:avc animated:YES completion:nil];
     }

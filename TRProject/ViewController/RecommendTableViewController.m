@@ -66,7 +66,9 @@
         case 2:
         {
             SpecialListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"specialList" forIndexPath:indexPath];
-            cell = [cell initWithColumn:self.recommendModel.specialColumn];    
+            if (self.recommendModel.specialColumn.list.firstObject) {
+                cell = [cell initWithColumn:self.recommendModel.specialColumn];
+            }
             return cell;
         }
         default:
@@ -83,7 +85,10 @@
         case 0:
             return 150;
         case 2:
-            return 240;
+            if (self.recommendModel.specialColumn.list.firstObject) {
+                return 240;
+            }
+            return 0;
         default:
             return 230;
     }

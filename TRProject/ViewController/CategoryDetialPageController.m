@@ -11,6 +11,7 @@
 #import "OtherPageTableViewController.h"
 #import "WMPageNumModel.h"
 #import "NetManager.h"
+
 @interface CategoryDetialPageController()
 @property (nonatomic,strong)WMPageNumModel *mod;
 @end
@@ -26,7 +27,9 @@
         self.menuHeight=45;
         self.menuItemWidth=kScreenW/6;
         self.menuBGColor =[UIColor clearColor];
-        
+        UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
+        backbutton.title = @"";
+        self.navigationItem.backBarButtonItem = backbutton;
         _Id =Id;
         _statMoudle = statMoudle;
         _pageType = pageType;
@@ -44,7 +47,7 @@
 #pragma mark - WMPageController 代理方法
 - (NSArray<NSString *> *)titles{
     NSMutableArray *tmparr = [NSMutableArray new];
-    [tmparr addObject:@"推荐"];
+    //[tmparr addObject:@"推荐"];
     for (WMPageNumModelCategoryinfoList *list in self.mod.list) {
         [tmparr addObject:list.tname];
     }
@@ -54,16 +57,17 @@
     return self.titles.count;
 }
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index{
-    switch (index) {
-        case 0:
-            return [[FirstPageTableViewController alloc]initWithId:self.mod.list[index].category_id];
-        default:
-            return  [[OtherPageTableViewController alloc]initWithId:self.mod.list[index].category_id tagName:self.mod.list[index].tname];
-            
-    }
+    //    switch (index) {
+    //        case 0:
+    //            return [[FirstPageTableViewController alloc]initWithId:self.mod.list[index].category_id];
+    //        default:
+    return  [[OtherPageTableViewController alloc]initWithId:self.mod.list[index].category_id tagName:self.mod.list[index].tname andSuperType:_statMoudle];
+    
+    //  }
     
     //  return nil;
 }
+
 - (NSString *)menuView:(WMMenuView *)menu titleAtIndex:(NSInteger)index{
     return self.titles[index];
 }

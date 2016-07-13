@@ -10,6 +10,7 @@
 
 @interface OtherPageTableViewController : UITableViewController
 @property (nonatomic,assign)NSInteger Id;
-@property (nonatomic,strong)NSString *tagName;
-- (instancetype)initWithId:(NSInteger)Id tagName:(NSString *)tagName;
+@property (nonatomic,copy)NSString *tagName;
+@property (nonatomic,copy)NSString *supertype;
+- (instancetype)initWithId:(NSInteger)Id tagName:(NSString *)tagName andSuperType:(NSString*)supertype;
 @end

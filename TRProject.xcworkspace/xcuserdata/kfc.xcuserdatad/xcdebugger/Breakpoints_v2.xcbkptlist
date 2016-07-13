@@ -26,75 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/RecommendTableViewController.m"
-            timestampString = "489829829.139227"
+            timestampString = "490067680.17096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[RecommendTableViewController viewDidLoad]_block_invoke_2"
-                  moduleName = "TRProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kfc/Desktop/XMLY/TRProject/ViewController/RecommendTableViewController.m"
-                  timestampString = "489575958.474093"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "TRProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kfc/Desktop/XMLY/TRProject/ViewController/RecommendTableViewController.m"
-                  timestampString = "489575958.474343"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "TRProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kfc/Desktop/XMLY/TRProject/ViewController/RecommendTableViewController.m"
-                  timestampString = "489575958.474736"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[RecommendTableViewController viewDidLoad]_block_invoke57"
-                  moduleName = "TRProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kfc/Desktop/XMLY/TRProject/ViewController/RecommendTableViewController.m"
-                  timestampString = "489575958.475195"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -152,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/RecommendTableViewController.m"
-            timestampString = "489829829.139227"
+            timestampString = "490067680.17096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-ic"
             landmarkType = "5">
          </BreakpointContent>
@@ -488,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/ListenListTableViewController.m"
-            timestampString = "489994486.721763"
+            timestampString = "490071608.557549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101">
+            startingLineNumber = "106"
+            endingLineNumber = "106">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -534,23 +472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/CategoryDetialPageController.m"
-            timestampString = "490023238.357074"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-initWithId:statMoudle:pageType:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TRProject/ViewController/CategoryDetialPageController.m"
-            timestampString = "490023238.357074"
+            timestampString = "490072622.502253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -566,11 +488,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/CategoryDetialPageController.m"
-            timestampString = "490023238.357074"
+            timestampString = "490072622.502253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-initWithId:statMoudle:pageType:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TRProject/ViewController/CategoryDetialPageController.m"
+            timestampString = "490072622.502253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-initWithId:statMoudle:pageType:"
             landmarkType = "5">
          </BreakpointContent>
@@ -582,7 +520,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/View/CategoryCell.m"
-            timestampString = "490023238.357074"
+            timestampString = "490069834.200747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -598,7 +536,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/View/CategoryCell.m"
-            timestampString = "490023238.357074"
+            timestampString = "490069446.012511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -614,12 +552,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TRProject/ViewController/OtherPageTableViewController.m"
-            timestampString = "490023643.191178"
+            timestampString = "490071608.557549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-initWithId:tagName:"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-initWithId:tagName:andSuperType:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -731,6 +669,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TRProject/View/SpecialListCell.m"
+            timestampString = "490067141.256476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-initWithColumn:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TRProject/ViewController/RecommendTableViewController.m"
+            timestampString = "490067680.17096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

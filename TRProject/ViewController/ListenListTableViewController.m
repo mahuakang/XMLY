@@ -13,6 +13,8 @@
 #import "ListenListListCell.h"
 #import "AlbumListCell.h"
 #import "AlbumTableViewController.h"
+@import AVKit;
+@import AVFoundation;
 @interface ListenListTableViewController ()
 @property (nonatomic,strong)ListenListModel *listenListModel;
 @end
@@ -53,7 +55,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==1) {
         if (_listenListModel.info.contentType==2) {
-            
+            AVPlayerViewController *avc = [AVPlayerViewController new];
+            avc.player = [AVPlayer playerWithURL:self.listenListModel.list[indexPath.row].playPath64.yx_URL];
+            [avc.player play];
+            [self presentViewController:avc animated:YES completion:nil];
         }else{
             AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:self.listenListModel.list[indexPath.row].Id statMoudle:@"听单详情" pageType:@(_listenListModel.info.specialId).stringValue];
             [self.navigationController pushViewController:atvc animated:YES];

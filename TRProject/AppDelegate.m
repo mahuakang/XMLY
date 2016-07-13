@@ -26,20 +26,19 @@
     UINavigationController *disNavi = [[UINavigationController alloc]initWithRootViewController:disC];
     disNavi.navigationBar.tintColor=[UIColor redColor];
     
+    //    SubscibeController *subC = [[SubscibeController alloc]init];
+    //    UINavigationController *subNavi = [[UINavigationController alloc]initWithRootViewController:subC];
+    //    
+    //    DownloadListenController *downC = [[DownloadListenController alloc]init];
+    //    UINavigationController *downNavi = [[UINavigationController alloc]initWithRootViewController:downC];
+    //    
+    //    MineTableViewController *mineC = [[MineTableViewController alloc]init];
+    //    UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
+    //    
+    //    UITabBarController *tbc = [UITabBarController new];
+    //    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
     
-    SubscibeController *subC = [[SubscibeController alloc]init];
-    UINavigationController *subNavi = [[UINavigationController alloc]initWithRootViewController:subC];
-    
-    DownloadListenController *downC = [[DownloadListenController alloc]init];
-    UINavigationController *downNavi = [[UINavigationController alloc]initWithRootViewController:downC];
-    
-    MineTableViewController *mineC = [[MineTableViewController alloc]init];
-    UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
-    
-    UITabBarController *tbc = [UITabBarController new];
-    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
-    
-    self.window.rootViewController =tbc;
+    self.window.rootViewController =disNavi;
     
     
     return YES;

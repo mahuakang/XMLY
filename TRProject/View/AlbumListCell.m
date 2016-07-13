@@ -21,7 +21,7 @@
         self.titleLab.text = _list.title;
         self.playTimesLab.text = _list.playtimes>10000?[NSString stringWithFormat:@"%.1f万",_list.playtimes/10000.0]:@(_list.playtimes).stringValue;
         self.duration.text = _list.duration>60
-        ?[NSString stringWithFormat:@"%@:%@",_list.duration/60>10?@(_list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration/60],_list.duration%60>10?@(_list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration%60]]
+        ?[NSString stringWithFormat:@"%@:%@",_list.duration/60>=10?@(_list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration/60],_list.duration%60>=10?@(_list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration%60]]
         :[NSString stringWithFormat:@"00:%ld",_list.duration];
         self.commentsLab.text = @(_list.comments).stringValue;
     }

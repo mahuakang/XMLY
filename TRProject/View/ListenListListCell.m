@@ -61,7 +61,8 @@
         _midLab = [[UILabel alloc] init];
         [self.contentView addSubview:_midLab];
         [_midLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.titleLab.mas_bottom).equalTo(5);
+            // make.top.equalTo(self.titleLab.mas_bottom).equalTo(5);
+            make.centerY.equalTo(0);
             make.right.equalTo(-kScreenW/6);
             make.left.equalTo(self.imageV.mas_right).equalTo(10);
         }];
@@ -82,7 +83,7 @@
             make.left.equalTo(self.imageV.mas_right).equalTo(20);
         }];
         _titleLab.numberOfLines=1;
-        _titleLab.font = [UIFont systemFontOfSize:14];
+        _titleLab.font = [UIFont systemFontOfSize:18];
     }
     return _titleLab;
 }
@@ -93,7 +94,8 @@
         [self.contentView addSubview:_imageV];
         [_imageV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.equalTo(5);
-            make.height.width.equalTo(80);
+            make.bottom.equalTo(-5);
+            make.height.width.equalTo(kScreenW/5);
         }];
         _imageV.contentMode = UIViewContentModeScaleToFill;
     }

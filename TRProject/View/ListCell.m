@@ -7,6 +7,7 @@
 //
 
 #import "ListCell.h"
+
 /*=======================RadiosCell begin=============================*/
 @interface RadiosCell : UITableViewCell
 @property (nonatomic,strong)UIImageView *imagev;
@@ -106,6 +107,8 @@
 
 @end
 /*=======================RadiosCell end=============================*/
+@import AVKit;
+@import AVFoundation;
 @interface ListCell()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UIView *cellHeadView;
 @property (nonatomic,strong)UIButton *button;
@@ -137,6 +140,13 @@
         [cell.imagev setImageURL:radioDetial.coverLarge.yx_URL];
     }
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    AVPlayerViewController *avc = [AVPlayerViewController new];
+    avc.player = [AVPlayer playerWithURL:self.data.topRadios[indexPath.row].playUrl.aac64.yx_URL];
+    [avc.player play];
+    [self.viewController presentViewController:avc animated:YES completion:nil];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;

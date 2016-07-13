@@ -23,7 +23,10 @@
         self.menuBGColor =[UIColor clearColor];
         self.tabBarItem.image = [UIImage imageNamed:@"tabbar_find_n"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_find_h"];
-        
+        [self.tabBarController hidesBottomBarWhenPushed];
+        UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
+        backbutton.title = @"";
+        self.navigationItem.backBarButtonItem = backbutton;
     }
     return self;
 }
