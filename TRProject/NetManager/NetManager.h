@@ -26,4 +26,8 @@
 + (instancetype)getWMFirstPageById:(NSInteger)Id completionHandler:(void(^)(id model,NSError*error))completionHandler;
 
 + (instancetype)getWMOtherPageById:(NSInteger)Id tagName:(NSString *)tagName completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getRadioCategoryListById:(NSInteger)Id Page:(NSInteger)page completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getBangdanDetialByType:(NSString* )type key:(NSString *)key completionHandler:(void(^)(id model,NSError*error))completionHandler;
 @end

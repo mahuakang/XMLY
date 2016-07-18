@@ -14,3 +14,10 @@
 @property (nonatomic,assign)NSUInteger currentSection;
 - (instancetype)initWithList:(RadioModelData *)data currentSection:(NSUInteger)currentSection;
 @end
+
+@interface RadiosCell : UITableViewCell
+@property (nonatomic,strong)UIImageView *imagev;
+@property (nonatomic,strong)UILabel *topLab;
+@property (nonatomic,strong)UILabel *midLab;
+@property (nonatomic,strong)UILabel *bottomLab;
+@end

@@ -22,17 +22,18 @@
 - (instancetype)initWithId:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType{
     self =[super init];
     if (self) {
-        self.showOnNavigationBar =YES;
         self.menuViewStyle =1;
         self.menuHeight=45;
-        self.menuItemWidth=kScreenW/6;
+        self.menuItemWidth=kScreenW/5;
         self.menuBGColor =[UIColor clearColor];
+        self.navigationItem.title = @"";
         UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
         backbutton.title = @"";
         self.navigationItem.backBarButtonItem = backbutton;
         _Id =Id;
         _statMoudle = statMoudle;
         _pageType = pageType;
+        self.navigationItem.title = _statMoudle;
     }
     return self;
 }

@@ -12,21 +12,7 @@
 @end
 
 @implementation AlbumListCell
-#pragma mark -  初始化
-- (instancetype)initWithList:(id)list{
-    self = [super init];
-    if (self) {
-        _list = list;
-        [self.imageV setImageURL:_list.coverLarge.yx_URL];
-        self.titleLab.text = _list.title;
-        self.playTimesLab.text = _list.playtimes>10000?[NSString stringWithFormat:@"%.1f万",_list.playtimes/10000.0]:@(_list.playtimes).stringValue;
-        self.duration.text = _list.duration>60
-        ?[NSString stringWithFormat:@"%@:%@",_list.duration/60>=10?@(_list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration/60],_list.duration%60>=10?@(_list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration%60]]
-        :[NSString stringWithFormat:@"00:%ld",_list.duration];
-        self.commentsLab.text = @(_list.comments).stringValue;
-    }
-    return self;
-}
+
 #pragma mark - 懒加载
 - (UIImageView *)imageV {
     if(_imageV == nil) {
@@ -62,9 +48,11 @@
         _playTimesLab = [[UILabel alloc] init];
         [self.contentView addSubview:_playTimesLab];
         [_playTimesLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.titleLab);
-            make.top.equalTo(self.titleLab.mas_bottom);
+            make.left.equalTo(self.titleLab).equalTo(5);
+            make.top.equalTo(self.titleLab.mas_bottom).equalTo(10);
+            make.bottom.equalTo(-10);
         }];
+        _playTimesLab.textColor = [UIColor grayColor];
     }
     return _playTimesLab;
 }
@@ -75,8 +63,10 @@
         [self.contentView addSubview:_duration];
         [_duration mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.playTimesLab);
-            make.left.equalTo(self.playTimesLab.mas_right).equalTo(5);
+            //     make.left.equalTo(self.playTimesLab.mas_right).equalTo(5);
+            make.right.equalTo(self.commentsLab.mas_left).equalTo(-10);
         }];
+        _duration.textColor = [UIColor grayColor];
     }
     return _duration;
 }
@@ -87,8 +77,10 @@
         [self.contentView addSubview:_commentsLab];
         [_commentsLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.playTimesLab);
-            make.left.equalTo(self.duration.mas_right).equalTo(5);
+            // make.left.equalTo(self.duration.mas_right).equalTo(5);
+            make.centerX.equalTo(0).equalTo(30);
         }];
+        _commentsLab.textColor = [UIColor grayColor];
     }
     return _commentsLab;
 }

@@ -13,20 +13,7 @@
 @end
 
 @implementation ListenListListCell
-#pragma mark -  初始化
-- (instancetype)initWithList:(ListenListModelList *)list{
-    self = [super init];
-    if (self) {
-        _list = list;
-        [self.imageV setImageURL:_list.albumCoverUrl290.yx_URL];
-        self.titleLab.text = _list.title;
-        self.midLab.text = _list.intro;
-        self.playCountsLab.text =_list.playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_list.playsCounts/10000.0]:@(_list.playsCounts).stringValue;
-        self.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_list.tracksCounts];
-        
-    }
-    return self;
-};
+
 #pragma mark - 懒加载
 - (UILabel *)tracksCounts {
     if(_tracksCounts == nil) {

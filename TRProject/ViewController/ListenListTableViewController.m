@@ -30,7 +30,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         ListenListHeadCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"ListenListHeadCell" forIndexPath:indexPath];
-        cell = [cell initWithList:_listenListModel.info];
+        cell.imageV.image = [UIImage imageNamed:@"1-1"];
+        cell.titleLab.text = _listenListModel.info.title;
+        cell.intro.text = _listenListModel.info.intro;
+        [cell.nickimage setImageURL:_listenListModel.info.smallLogo.yx_URL];
+        cell.nickname.text = _listenListModel.info.nickname;
+        [cell xiaobian];
         return cell;
     }else{
         if (_listenListModel.info.contentType==2) {
@@ -46,11 +51,35 @@
             return cell;
         }else if(_listenListModel.info.contentType==1){
             ListenListListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListenListListCell" forIndexPath:indexPath];
-            cell = [cell initWithList:_listenListModel.list[indexPath.row]];
+            [cell.imageV setImageURL:_listenListModel.list[indexPath.row].albumCoverUrl290.yx_URL];
+            cell.titleLab.text = _listenListModel.list[indexPath.row].title;
+            cell.midLab.text = _listenListModel.list[indexPath.row].intro;
+            cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
+            cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
             return cell;
         }
     }
     return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+        return [tableView fd_heightForCellWithIdentifier:@"ListenListHeadCell" configuration:^(ListenListHeadCell* cell) {
+            cell.titleLab.text = _listenListModel.info.title;
+            cell.intro.text = _listenListModel.info.intro;
+            [cell.nickimage setImageURL:_listenListModel.info.smallLogo.yx_URL];
+            cell.nickname.text = _listenListModel.info.nickname;
+            [cell xiaobian];
+        }];
+    }else{
+        return [tableView fd_heightForCellWithIdentifier:@"ListenListListCell" configuration:^(ListenListListCell*  cell) {
+            [cell.imageV setImageURL:_listenListModel.list[indexPath.row].albumCoverUrl290.yx_URL];
+            cell.titleLab.text = _listenListModel.list[indexPath.row].title;
+            cell.midLab.text = _listenListModel.list[indexPath.row].intro;
+            cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
+            cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
+        }];
+    }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==1) {
@@ -65,8 +94,11 @@
         }
     }
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return indexPath.section==0?400:100;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 10;
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType{
@@ -75,6 +107,10 @@
         _Id = Id;
         _statMoudle = statMoudle;
         _pageType = pageType;
+        self.navigationItem.title = @"听单详情";
+        UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
+        backbutton.title = @"";
+        self.navigationItem.backBarButtonItem = backbutton;
     }
     return self;
 }

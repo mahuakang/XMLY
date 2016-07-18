@@ -16,7 +16,5 @@
 @property (nonatomic,strong)UILabel *playCountsLab;
 @property (nonatomic,strong)UILabel *tracksCounts;
 
-@property (nonatomic,strong)ListenListModelList *list;
-- (instancetype)initWithList:(ListenListModelList *)list;
 
 @end

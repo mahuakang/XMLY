@@ -49,6 +49,12 @@
 		A23564531D2F4967004A504B /* SpecialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564521D2F4967004A504B /* SpecialListCell.m */; };
 		A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564551D2F4BEE004A504B /* DiscorverPageController.m */; };
 		A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564591D2FA2BD004A504B /* CategoryCell.m */; };
+		A267563C1D3CB9D100791F04 /* BangdanDetialTableviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A267563B1D3CB9D100791F04 /* BangdanDetialTableviewController.m */; };
+		A26756401D3CBB3500791F04 /* BangdanDetialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A267563F1D3CBB3500791F04 /* BangdanDetialModel.m */; };
+		A26756441D3CBEDD00791F04 /* BangdanDetialTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26756431D3CBEDD00791F04 /* BangdanDetialTrackCell.m */; };
+		A26756471D3CC19100791F04 /* BangdanDetialAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26756461D3CC19100791F04 /* BangdanDetialAlbumCell.m */; };
+		A2750F591D387512003FE6F5 /* RadioCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2750F581D387512003FE6F5 /* RadioCategoryTableViewController.m */; };
+		A2750F5D1D3875C9003FE6F5 /* RadioCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2750F5C1D3875C9003FE6F5 /* RadioCategoryModel.m */; };
 		A2C6EC291D33A7030000E250 /* ListenListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC281D33A7030000E250 /* ListenListTableViewController.m */; };
 		A2C6EC301D33A7CF0000E250 /* ListenListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC2F1D33A7CF0000E250 /* ListenListModel.m */; };
 		A2C6EC331D33AB590000E250 /* ListenListHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC321D33AB590000E250 /* ListenListHeadCell.m */; };
@@ -145,6 +151,18 @@
 		A23564551D2F4BEE004A504B /* DiscorverPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscorverPageController.m; sourceTree = "<group>"; };
 		A23564581D2FA2BD004A504B /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		A23564591D2FA2BD004A504B /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		A267563A1D3CB9D100791F04 /* BangdanDetialTableviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialTableviewController.h; sourceTree = "<group>"; };
+		A267563B1D3CB9D100791F04 /* BangdanDetialTableviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangdanDetialTableviewController.m; sourceTree = "<group>"; };
+		A267563E1D3CBB3500791F04 /* BangdanDetialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialModel.h; sourceTree = "<group>"; };
+		A267563F1D3CBB3500791F04 /* BangdanDetialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangdanDetialModel.m; sourceTree = "<group>"; };
+		A26756421D3CBEDD00791F04 /* BangdanDetialTrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialTrackCell.h; sourceTree = "<group>"; };
+		A26756431D3CBEDD00791F04 /* BangdanDetialTrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangdanDetialTrackCell.m; sourceTree = "<group>"; };
+		A26756451D3CC19100791F04 /* BangdanDetialAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialAlbumCell.h; sourceTree = "<group>"; };
+		A26756461D3CC19100791F04 /* BangdanDetialAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangdanDetialAlbumCell.m; sourceTree = "<group>"; };
+		A2750F571D387512003FE6F5 /* RadioCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCategoryTableViewController.h; sourceTree = "<group>"; };
+		A2750F581D387512003FE6F5 /* RadioCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCategoryTableViewController.m; sourceTree = "<group>"; };
+		A2750F5B1D3875C9003FE6F5 /* RadioCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCategoryModel.h; sourceTree = "<group>"; };
+		A2750F5C1D3875C9003FE6F5 /* RadioCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCategoryModel.m; sourceTree = "<group>"; };
 		A2C6EC271D33A7030000E250 /* ListenListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenListTableViewController.h; sourceTree = "<group>"; };
 		A2C6EC281D33A7030000E250 /* ListenListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenListTableViewController.m; sourceTree = "<group>"; };
 		A2C6EC2E1D33A7CF0000E250 /* ListenListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenListModel.h; sourceTree = "<group>"; };
@@ -365,14 +383,16 @@
 		A20406331D3210A4003A9934 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
-				A2C6EC2D1D33A7440000E250 /* 分页详情 */,
+				A26756391D3CB99500791F04 /* 榜单_详情 */,
+				A2750F561D3874DB003FE6F5 /* 广播_详情 */,
+				A2C6EC2D1D33A7440000E250 /* 分类_详情 */,
 				A2C6EC2B1D33A7310000E250 /* 听单详情 */,
 				A2C6EC2A1D33A7240000E250 /* 专辑详情 */,
 			);
 			name = "详情页";
 			sourceTree = "<group>";
 		};
-		A20406341D32113D003A9934 /* 分页详情 */ = {
+		A20406341D32113D003A9934 /* 分类_详情 */ = {
 			isa = PBXGroup;
 			children = (
 				A23564471D2E4AA7004A504B /* WMPageNumModel.h */,
@@ -382,13 +402,14 @@
 				A20D32181D34C37E00418EEC /* WMOtherPageModel.h */,
 				A20D32191D34C37E00418EEC /* WMOtherPageModel.m */,
 			);
-			name = "分页详情";
+			name = "分类_详情";
 			sourceTree = "<group>";
 		};
 		A20406381D321A32003A9934 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
-				A2C6EC261D33A6C00000E250 /* 分页详情 */,
+				A26756411D3CBEBB00791F04 /* 榜单_详情 */,
+				A2C6EC261D33A6C00000E250 /* 分类_详情 */,
 				A2C6EC251D33A6B40000E250 /* 听单详情 */,
 				A20406391D321A3C003A9934 /* 专辑详情 */,
 			);
@@ -441,7 +462,9 @@
 		A20D15681D2D1D5B00DBBFC2 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
-				A20406341D32113D003A9934 /* 分页详情 */,
+				A267563D1D3CBB0D00791F04 /* 榜单_详情 */,
+				A2750F5A1D38757D003FE6F5 /* 广播_详情 */,
+				A20406341D32113D003A9934 /* 分类_详情 */,
 				A20406231D31EEF6003A9934 /* 听单详情 */,
 				A20D156F1D2D1EF200DBBFC2 /* 专辑详情 */,
 			);
@@ -481,6 +504,53 @@
 			name = "发现_分类";
 			sourceTree = "<group>";
 		};
+		A26756391D3CB99500791F04 /* 榜单_详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A267563A1D3CB9D100791F04 /* BangdanDetialTableviewController.h */,
+				A267563B1D3CB9D100791F04 /* BangdanDetialTableviewController.m */,
+			);
+			name = "榜单_详情";
+			sourceTree = "<group>";
+		};
+		A267563D1D3CBB0D00791F04 /* 榜单_详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A267563E1D3CBB3500791F04 /* BangdanDetialModel.h */,
+				A267563F1D3CBB3500791F04 /* BangdanDetialModel.m */,
+			);
+			name = "榜单_详情";
+			sourceTree = "<group>";
+		};
+		A26756411D3CBEBB00791F04 /* 榜单_详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A26756421D3CBEDD00791F04 /* BangdanDetialTrackCell.h */,
+				A26756431D3CBEDD00791F04 /* BangdanDetialTrackCell.m */,
+				A26756451D3CC19100791F04 /* BangdanDetialAlbumCell.h */,
+				A26756461D3CC19100791F04 /* BangdanDetialAlbumCell.m */,
+			);
+			name = "榜单_详情";
+			sourceTree = "<group>";
+		};
+		A2750F561D3874DB003FE6F5 /* 广播_详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A2750F571D387512003FE6F5 /* RadioCategoryTableViewController.h */,
+				A2750F581D387512003FE6F5 /* RadioCategoryTableViewController.m */,
+			);
+			name = "广播_详情";
+			sourceTree = "<group>";
+		};
+		A2750F5A1D38757D003FE6F5 /* 广播_详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A2750F5B1D3875C9003FE6F5 /* RadioCategoryModel.h */,
+				A2750F5C1D3875C9003FE6F5 /* RadioCategoryModel.m */,
+			);
+			name = "广播_详情";
+			sourceTree = "<group>";
+		};
 		A2C6EC251D33A6B40000E250 /* 听单详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,11 +562,11 @@
 			name = "听单详情";
 			sourceTree = "<group>";
 		};
-		A2C6EC261D33A6C00000E250 /* 分页详情 */ = {
+		A2C6EC261D33A6C00000E250 /* 分类_详情 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "分页详情";
+			name = "分类_详情";
 			sourceTree = "<group>";
 		};
 		A2C6EC2A1D33A7240000E250 /* 专辑详情 */ = {
@@ -517,7 +587,7 @@
 			name = "听单详情";
 			sourceTree = "<group>";
 		};
-		A2C6EC2D1D33A7440000E250 /* 分页详情 */ = {
+		A2C6EC2D1D33A7440000E250 /* 分类_详情 */ = {
 			isa = PBXGroup;
 			children = (
 				A20D321B1D34C3B500418EEC /* CategoryDetialPageController.h */,
@@ -527,7 +597,7 @@
 				A20D32211D34C3E900418EEC /* OtherPageTableViewController.h */,
 				A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */,
 			);
-			name = "分页详情";
+			name = "分类_详情";
 			sourceTree = "<group>";
 		};
 		A2E32A861D30C50B002226B2 /* 发现_广播 */ = {
@@ -691,6 +761,7 @@
 				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A2C6EC301D33A7CF0000E250 /* ListenListModel.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
+				A26756441D3CBEDD00791F04 /* BangdanDetialTrackCell.m in Sources */,
 				A20D321A1D34C37E00418EEC /* WMOtherPageModel.m in Sources */,
 				A20D32171D34C36F00418EEC /* WMFirstPageModel.m in Sources */,
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
@@ -699,6 +770,8 @@
 				A20406261D31EFAE003A9934 /* PlayerViewController.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
+				A267563C1D3CB9D100791F04 /* BangdanDetialTableviewController.m in Sources */,
+				A2750F591D387512003FE6F5 /* RadioCategoryTableViewController.m in Sources */,
 				A2C6EC291D33A7030000E250 /* ListenListTableViewController.m in Sources */,
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
 				A20406291D31EFC9003A9934 /* MineTableViewController.m in Sources */,
@@ -706,11 +779,13 @@
 				A204063F1D321C55003A9934 /* AlbumListCell.m in Sources */,
 				A204063C1D321C46003A9934 /* AlbumHeadCell.m in Sources */,
 				A20D15561D2D0C5000DBBFC2 /* RecommendTableViewController.m in Sources */,
+				A26756471D3CC19100791F04 /* BangdanDetialAlbumCell.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
 				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
 				A2C6EC361D33AB8E0000E250 /* ListenListListCell.m in Sources */,
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
 				A20D321D1D34C3B500418EEC /* CategoryDetialPageController.m in Sources */,
+				A26756401D3CBB3500791F04 /* BangdanDetialModel.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
@@ -725,6 +800,7 @@
 				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
 				A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */,
 				A2E32A8F1D30E292002226B2 /* bangdanCell.m in Sources */,
+				A2750F5D1D3875C9003FE6F5 /* RadioCategoryModel.m in Sources */,
 				A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */,
 				A2C6EC331D33AB590000E250 /* ListenListHeadCell.m in Sources */,
 			);

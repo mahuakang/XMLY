@@ -31,17 +31,60 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         AlbumHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumHeadCell" forIndexPath:indexPath];
-        cell = [cell initWithList:self.adlModel.data.album];
+        AlbumDetialListModelDataAlbum *_Headdata = self.adlModel.data.album;
+        [cell.imagev setImageURL:_Headdata.coverOrigin.yx_URL];
+        cell.titleLab.text = _Headdata.title;
+        [cell.nickNameBtn setTitle:_Headdata.nickname forState:UIControlStateNormal];
+        cell.playTime.text = [NSString stringWithFormat:@"播放: %@次",_Headdata.playTimes>10000?[NSString stringWithFormat:@"%.1f万",_Headdata.playTimes/10000.0]:@(_Headdata.playTimes).stringValue];
+        NSDateFormatter *df= [NSDateFormatter new];
+        df.dateFormat = @"yyyy-MM-dd";
+        cell.lastUpdateTime.text = [NSString stringWithFormat:@"状态: %@更新",[df  stringFromDate:[NSDate dateWithTimeIntervalSince1970:_Headdata.lastUptrackAt/1000]]];
         return cell;
     }else{
         AlbumListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumListCell" forIndexPath:indexPath];
-        cell = [cell initWithList:self.adlModel.data.tracks.list[indexPath.row]];
+        AlbumDetialListModelDataTracksList *_list=self.adlModel.data.tracks.list[indexPath.row];
+        [cell.imageV setImageURL:_list.coverLarge.yx_URL];
+        cell.titleLab.text = _list.title;
+        cell.playTimesLab.text = _list.playtimes>10000?[NSString stringWithFormat:@"%.1f万",_list.playtimes/10000.0]:@(_list.playtimes).stringValue;
+        cell.duration.text = _list.duration>60
+        ?[NSString stringWithFormat:@"%@:%@",_list.duration/60>=10?@(_list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration/60],_list.duration%60>=10?@(_list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration%60]]
+        :[NSString stringWithFormat:@"00:%ld",_list.duration];
+        
+        cell.commentsLab.text = @(_list.comments).stringValue;
         return cell;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return indexPath.section==0?200:80;
+    if (indexPath.section==0) {
+        return [tableView fd_heightForCellWithIdentifier:@"AlbumHeadCell" configuration:^(AlbumHeadCell * cell) {
+            AlbumDetialListModelDataAlbum *_Headdata = self.adlModel.data.album;
+            [cell.imagev setImageURL:_Headdata.coverOrigin.yx_URL];
+            cell.titleLab.text = _Headdata.title;
+            [cell.nickNameBtn setTitle:_Headdata.nickname forState:UIControlStateNormal];
+            cell.playTime.text = [NSString stringWithFormat:@"播放: %@次",_Headdata.playTimes>10000?[NSString stringWithFormat:@"%.1f万",_Headdata.playTimes/10000.0]:@(_Headdata.playTimes).stringValue];
+            NSDateFormatter *df= [NSDateFormatter new];
+            df.dateFormat = @"yyyy-MM-dd";
+            cell.lastUpdateTime.text = [NSString stringWithFormat:@"状态: %@更新",[df  stringFromDate:[NSDate dateWithTimeIntervalSince1970:_Headdata.lastUptrackAt/1000]]];
+        }];
+    }else{
+        return [tableView fd_heightForCellWithIdentifier:@"AlbumListCell" configuration:^(AlbumListCell * cell) {
+            AlbumDetialListModelDataTracksList *_list=self.adlModel.data.tracks.list[indexPath.row];
+            [cell.imageV setImageURL:_list.coverLarge.yx_URL];
+            cell.titleLab.text = _list.title;
+            cell.playTimesLab.text = _list.playtimes>10000?[NSString stringWithFormat:@"%.1f万",_list.playtimes/10000.0]:@(_list.playtimes).stringValue;
+            cell.duration.text = _list.duration>60
+            ?[NSString stringWithFormat:@"%@:%@",_list.duration/60>=10?@(_list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration/60],_list.duration%60>=10?@(_list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",_list.duration%60]]
+            :[NSString stringWithFormat:@"00:%ld",_list.duration];
+            cell.commentsLab.text = @(_list.comments).stringValue;
+        }];
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 10;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section ==1) {
@@ -60,7 +103,7 @@
         _albumUid = albumUid;
         _statMoudle = statMoudle;
         _pageType = pageType;
-        
+        self.navigationItem.title = @"专辑详情";
     }
     return self;
 }

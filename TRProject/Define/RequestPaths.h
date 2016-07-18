@@ -31,6 +31,10 @@
 
 #define WmFirstPage @"http://mobile.ximalaya.com/mobile/discovery/v2/category/recommends?categoryId=%ld&contentType=album&device=iphone&version=5.4.9"
 
+#define RadiocategoryPath @"http://live.ximalaya.com/live-web/v2/radio/category?categoryId=%ld&pageNum=%ld&pageSize=20"
+
+#define bandanDetialPath @"http://mobile.ximalaya.com/mobile/discovery/v2/rankingList/%@?device=android&key=%@&pageId=1&pageSize=20&scale=2"
+
 #endif /* RequestPaths_h */
 
 

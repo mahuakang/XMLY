@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ListenListModel.h"
 @interface ListenListHeadCell:UITableViewCell
-@property (nonatomic,strong)ListenListModelInfo *info;
-- (instancetype)initWithList:(ListenListModelInfo *)info;
+@property (nonatomic,strong)UIImageView *imageV;
+@property (nonatomic,strong)UILabel *titleLab;
+@property (nonatomic,strong)UILabel *detialColumn;
+@property (nonatomic,strong)UILabel *intro;
+
+@property (nonatomic,strong)UILabel *nickname;
+@property (nonatomic,strong)UILabel *xiaobian;
+@property (nonatomic,strong)UIImageView *nickimage;
 @end

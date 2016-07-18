@@ -7,6 +7,7 @@
 //
 
 #import "HeadItemCell.h"
+#import "RadioCategoryTableViewController.h"
 @interface HeadItemCell()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView *cv;
 @property (nonatomic,strong)UILabel *lab;
@@ -41,9 +42,8 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row ==self.categoriesData.count) {
-        
-    }
+    RadioCategoryTableViewController *rctvc = [[RadioCategoryTableViewController alloc]initWithId:self.categoriesData[indexPath.row].Id CategoryName:self.categoriesData[indexPath.row].name];
+    [self.viewController.navigationController pushViewController:rctvc animated:YES];
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(RadioModelData *)data{

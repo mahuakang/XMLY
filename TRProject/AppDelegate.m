@@ -22,24 +22,27 @@
     //全局默认配置
     [self setupGlobalConfig];
     
+    
     DiscorverPageController *disC= [[DiscorverPageController alloc]init];
     UINavigationController *disNavi = [[UINavigationController alloc]initWithRootViewController:disC];
     disNavi.navigationBar.tintColor=[UIColor redColor];
     
-    //    SubscibeController *subC = [[SubscibeController alloc]init];
-    //    UINavigationController *subNavi = [[UINavigationController alloc]initWithRootViewController:subC];
-    //    
-    //    DownloadListenController *downC = [[DownloadListenController alloc]init];
-    //    UINavigationController *downNavi = [[UINavigationController alloc]initWithRootViewController:downC];
-    //    
-    //    MineTableViewController *mineC = [[MineTableViewController alloc]init];
-    //    UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
-    //    
-    //    UITabBarController *tbc = [UITabBarController new];
-    //    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
+    SubscibeController *subC = [[SubscibeController alloc]init];
+    UINavigationController *subNavi = [[UINavigationController alloc]initWithRootViewController:subC];
     
-    self.window.rootViewController =disNavi;
+    DownloadListenController *downC = [[DownloadListenController alloc]init];
+    UINavigationController *downNavi = [[UINavigationController alloc]initWithRootViewController:downC];
     
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MineTableViewController *mineC = [sb instantiateViewControllerWithIdentifier:@"Mine"];
+    mineC.tabBarItem.image = [UIImage imageNamed:@"tabbar_me_n"];
+    mineC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_me_h"];
+    
+    
+    UITabBarController *tbc = [UITabBarController new];
+    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineC];
+    
+    self.window.rootViewController =tbc;
     
     return YES;
 }

@@ -49,6 +49,7 @@
         _Id = Id;
         _tagName = tagName;
         _supertype = supertype;
+        
     }
     return self;
 }

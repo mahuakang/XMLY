@@ -8,12 +8,7 @@
 
 #import "AlbumHeadCell.h"
 @interface AlbumHeadCell()
-@property (nonatomic,strong)UIImageView *imagev;
-@property (nonatomic,strong)UILabel *titleLab;
-@property (nonatomic,strong)UILabel *nickName;
-@property (nonatomic,strong)UIButton *nickNameBtn;
-@property (nonatomic,strong)UILabel *playTime;
-@property (nonatomic,strong)UILabel *lastUpdateTime;
+
 @end
 
 @implementation AlbumHeadCell
@@ -22,13 +17,7 @@
     self = [super init];
     if (self) {
         _Headdata = headdata;
-        [self.imagev setImageURL:_Headdata.coverOrigin.yx_URL];
-        self.titleLab.text = _Headdata.title;
-        [self.nickNameBtn setTitle:_Headdata.nickname forState:UIControlStateNormal];
-        self.playTime.text = [NSString stringWithFormat:@"播放: %@次",_Headdata.playTimes>10000?[NSString stringWithFormat:@"%.1f万",_Headdata.playTimes/10000.0]:@(_Headdata.playTimes).stringValue];
-        NSDateFormatter *df= [NSDateFormatter new];
-        df.dateFormat = @"yyyy-MM-dd";
-        self.lastUpdateTime.text = [NSString stringWithFormat:@"状态: %@更新",[df  stringFromDate:[NSDate dateWithTimeIntervalSince1970:_Headdata.lastUptrackAt/1000]]];
+        
         
     }
     return self;
@@ -41,6 +30,7 @@
         [_imagev mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.equalTo(10);
             make.width.height.equalTo(kScreenW/3);
+            make.bottom.equalTo(-5);
         }];
         _imagev.contentMode = UIViewContentModeScaleToFill;
         

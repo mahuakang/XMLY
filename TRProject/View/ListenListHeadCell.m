@@ -8,28 +8,12 @@
 
 #import "ListenListHeadCell.h"
 
-@interface  ListenListHeadCell()
-@property (nonatomic,strong)UIImageView *imageV;
-@property (nonatomic,strong)UILabel *titleLab;
-@property (nonatomic,strong)UILabel *detialColumn;
-@property (nonatomic,strong)UILabel *intro;
-
-@property (nonatomic,strong)UILabel *nickname;
-@property (nonatomic,strong)UILabel *xiaobian;
-@property (nonatomic,strong)UIImageView *nickimage;
-@end
-
 @implementation ListenListHeadCell
 #pragma mark -  初始化
-- (instancetype)initWithList:(ListenListModelInfo *)info{
-    self = [super init];
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        _info = info;
-        self.titleLab.text = _info.title;
-        self.intro.text = _info.intro;
-        [self.nickimage setImageURL:_info.smallLogo.yx_URL];
-        self.nickname.text = _info.nickname;
-        [self xiaobian];
+        [self imageV];
     }
     return self;
 }
@@ -41,9 +25,8 @@
         [_imageV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(20);
             make.left.equalTo(5);
-            make.height.with.equalTo(50);
+            make.height.width.equalTo(50);
         }];
-        _imageV.image = [UIImage imageNamed:@"1-1"];
         _imageV.contentMode = UIViewContentModeScaleToFill;
     }
     return _imageV;
@@ -100,6 +83,7 @@
         [_nickname mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.titleLab);
             make.top.equalTo(self.intro.mas_bottom).equalTo(20);
+            
         }];
         _nickname.textColor = [UIColor grayColor];
     }
@@ -128,6 +112,7 @@
             make.right.equalTo(self.nickname.mas_left).equalTo(-5);
             make.top.equalTo(self.nickname).equalTo(-3);
             make.height.width.equalTo(30);
+            make.bottom.equalTo(-15);
         }];
         _nickimage.contentMode = UIViewContentModeScaleToFill;
     }

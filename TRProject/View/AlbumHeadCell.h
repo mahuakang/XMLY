@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "AlbumDetialListModel.h"
 @interface AlbumHeadCell : UITableViewCell
+@property (nonatomic,strong)UIImageView *imagev;
+@property (nonatomic,strong)UILabel *titleLab;
+@property (nonatomic,strong)UILabel *nickName;
+@property (nonatomic,strong)UIButton *nickNameBtn;
+@property (nonatomic,strong)UILabel *playTime;
+@property (nonatomic,strong)UILabel *lastUpdateTime;
 @property (nonatomic,strong)AlbumDetialListModelDataAlbum *Headdata;
 - (instancetype)initWithList:(AlbumDetialListModelDataAlbum *)headdata;
 @end

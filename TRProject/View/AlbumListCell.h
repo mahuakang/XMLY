@@ -14,6 +14,4 @@
 @property (nonatomic,strong)UILabel *playTimesLab;
 @property (nonatomic,strong)UILabel *duration;
 @property (nonatomic,strong)UILabel *commentsLab;
-@property (nonatomic,strong)AlbumDetialListModelDataTracksList *list;
-- (instancetype)initWithList:(id)list;
 @end

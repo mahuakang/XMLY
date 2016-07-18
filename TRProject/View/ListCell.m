@@ -9,12 +9,7 @@
 #import "ListCell.h"
 
 /*=======================RadiosCell begin=============================*/
-@interface RadiosCell : UITableViewCell
-@property (nonatomic,strong)UIImageView *imagev;
-@property (nonatomic,strong)UILabel *topLab;
-@property (nonatomic,strong)UILabel *midLab;
-@property (nonatomic,strong)UILabel *bottomLab;
-@end
+
 @implementation RadiosCell
 #pragma mark - 懒加载
 - (UILabel *)bottomLab {
@@ -141,15 +136,15 @@
     }
     return cell;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     AVPlayerViewController *avc = [AVPlayerViewController new];
-    avc.player = [AVPlayer playerWithURL:self.data.topRadios[indexPath.row].playUrl.aac64.yx_URL];
+    avc.player = [AVPlayer playerWithURL:self.data.topRadios[indexPath.row].playUrl.aac24.yx_URL];
     [avc.player play];
     [self.viewController presentViewController:avc animated:YES completion:nil];
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(RadioModelData *)data currentSection:(NSUInteger)currentSection{

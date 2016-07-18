@@ -7,14 +7,9 @@
 //
 
 #import "MineTableViewController.h"
-
+@interface MineTableViewController()
+@end
 @implementation MineTableViewController
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-        self.tabBarItem.image = [UIImage imageNamed:@"tabbar_me_n"];
-        self.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_me_h"];
-    }
-    return self;
-}
+
+
 @end
