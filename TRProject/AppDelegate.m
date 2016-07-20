@@ -37,10 +37,11 @@
     MineTableViewController *mineC = [sb instantiateViewControllerWithIdentifier:@"Mine"];
     mineC.tabBarItem.image = [UIImage imageNamed:@"tabbar_me_n"];
     mineC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_me_h"];
-    
+    UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
+    mineC.navigationItem.title=@"个人设置";
     
     UITabBarController *tbc = [UITabBarController new];
-    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineC];
+    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
     
     self.window.rootViewController =tbc;
     

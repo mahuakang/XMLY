@@ -27,12 +27,13 @@
     if(_titleLab == nil) {
         _titleLab = [[UILabel alloc] init];
         [self.contentView addSubview:_titleLab];
+        _titleLab.numberOfLines=2;
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.AlbumImage);
             make.left.equalTo(self.AlbumImage.mas_right).equalTo(10);
-            make.right.equalTo(-kScreenW/7);
+            make.right.equalTo(-kScreenW/6);
         }];
-        _titleLab.numberOfLines=2;
+        
     }
     return _titleLab;
 }
@@ -49,6 +50,7 @@
         _AlbumImage.contentMode = UIViewContentModeScaleToFill;
         _AlbumImage.layer.cornerRadius=40;
         _AlbumImage.clipsToBounds=YES;
+        
     }
     return _AlbumImage;
 }
@@ -60,6 +62,7 @@
         [_numLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(0);
             make.left.equalTo(10);
+            make.width.equalTo(20);
         }];
     }
     return _numLab;

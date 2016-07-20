@@ -42,8 +42,12 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    RadioCategoryTableViewController *rctvc = [[RadioCategoryTableViewController alloc]initWithId:self.categoriesData[indexPath.row].Id CategoryName:self.categoriesData[indexPath.row].name];
-    [self.viewController.navigationController pushViewController:rctvc animated:YES];
+    if (indexPath.row == self.categoriesData.count) {//最后一个
+        
+    }else{
+        RadioCategoryTableViewController *rctvc = [[RadioCategoryTableViewController alloc]initWithId:self.categoriesData[indexPath.row].Id CategoryName:self.categoriesData[indexPath.row].name];
+        [self.viewController.navigationController pushViewController:rctvc animated:YES];
+    }
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(RadioModelData *)data{

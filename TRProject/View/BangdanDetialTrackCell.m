@@ -44,7 +44,9 @@
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.imageV);
             make.left.equalTo(self.imageV.mas_right).equalTo(5);
+            make.right.equalTo(-20);
         }];
+        _titleLab.numberOfLines=1;
     }
     return _titleLab;
 }
@@ -70,6 +72,7 @@
         [_numlab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(0);
             make.left.equalTo(10);
+            make.width.equalTo(20);
         }];
         
     }
