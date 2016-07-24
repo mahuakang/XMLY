@@ -113,11 +113,19 @@
     [self.tableView registerClass:[AlbumHeadCell class] forCellReuseIdentifier:@"AlbumHeadCell"];
     [self.tableView registerClass:[AlbumListCell class] forCellReuseIdentifier:@"AlbumListCell"];
     [NetManager getAlbumDetial:_albumUid statMoudle:_statMoudle pageType:_pageType ListcompletionHandler:^(id model, NSError *error) {
-        self.adlModel = model;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            self.adlModel = model;
+            [self.tableView reloadData];
+        }
     } completionHandler:^(id model, NSError *error) {
-        self.adModel = model;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            self.adModel = model;
+            [self.tableView reloadData];
+        }
     }];
 }
 @end

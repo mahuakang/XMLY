@@ -30,7 +30,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         ListenListHeadCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"ListenListHeadCell" forIndexPath:indexPath];
-        cell.imageV.image = [UIImage imageNamed:@"1-1"];
+        cell.imageV.image = [UIImage imageNamed:@"findsubject_cover"];
         cell.titleLab.text = _listenListModel.info.title;
         cell.intro.text = _listenListModel.info.intro;
         [cell.nickimage setImageURL:_listenListModel.info.smallLogo.yx_URL];
@@ -121,8 +121,12 @@
     [self.tableView registerClass:[ListenListListCell  class] forCellReuseIdentifier:@"ListenListListCell"];
     [self.tableView registerClass:[AlbumListCell  class] forCellReuseIdentifier:@"AlbumListCell"];
     [NetManager getListenListList:_Id statMoudle:_statMoudle pageType:_pageType completionHandler:^(id model, NSError *error) {
-        _listenListModel = model;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            _listenListModel = model;
+            [self.tableView reloadData];
+        }
     }];
 }
 @end

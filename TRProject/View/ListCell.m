@@ -7,6 +7,7 @@
 //
 
 #import "ListCell.h"
+#import "PlayerViewController.h"
 
 /*=======================RadiosCell begin=============================*/
 
@@ -141,10 +142,20 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    AVPlayerViewController *avc = [AVPlayerViewController new];
-    avc.player = [AVPlayer playerWithURL:self.data.topRadios[indexPath.row].playUrl.aac24.yx_URL];
-    [avc.player play];
-    [self.viewController presentViewController:avc animated:YES completion:nil];
+    if (_currentSection==1) {
+        RadioModelCategoriesLocalradios *radioDetial = self.data.localRadios[indexPath.row];
+        UINavigationController *navi =self.viewController.tabBarController.viewControllers[2];
+        PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverLarge Title:radioDetial.name detial:radioDetial.programName duraTime:360];
+        [self.viewController.tabBarController setSelectedIndex:2];
+        
+    }else{
+        RadioModelDataTopradios *radioDetial = self.data.topRadios[indexPath.row];
+        UINavigationController *navi =self.viewController.tabBarController.viewControllers[2];
+        PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverLarge Title:radioDetial.name detial:radioDetial.programName duraTime:360];
+        [self.viewController.tabBarController setSelectedIndex:2];
+    }
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(RadioModelData *)data currentSection:(NSUInteger)currentSection{
@@ -166,11 +177,21 @@
             make.top.left.right.equalTo(5);
             make.height.equalTo(40);
         }];
+        
+        //红色小三角
+        UIImageView *imageV = [UIImageView new];
+        [_cellHeadView addSubview:imageV];
+        [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(10);
+            make.centerY.equalTo(0);
+        }];
+        imageV.image = [UIImage imageNamed:@"findsection_logo"];
+        
         _titleLab = [UILabel new];
         [_cellHeadView addSubview:_titleLab];
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(0);
-            make.left.equalTo(20);
+            make.left.equalTo(imageV.mas_right).equalTo(10);
         }];
         
         _button = [UIButton buttonWithType:UIButtonTypeCustom];

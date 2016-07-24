@@ -118,13 +118,23 @@
             make.top.left.right.equalTo(5);
             make.height.equalTo(40);
         }];
+        //红色小三角
+        UIImageView *imageV = [UIImageView new];
+        [_cellHeadView addSubview:imageV];
+        [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(10);
+            make.centerY.equalTo(0);
+        }];
+        imageV.image = [UIImage imageNamed:@"findsection_logo"];
+        
+        //标题
         _titleLab = [UILabel new];
         [_cellHeadView addSubview:_titleLab];
         [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(0);
-            make.left.equalTo(20);
+            make.left.equalTo(imageV.mas_right).equalTo(10);
         }];
-        
+        //更多按钮
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cellHeadView addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {

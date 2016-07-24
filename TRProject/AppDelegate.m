@@ -13,6 +13,7 @@
 #import "PlayerViewController.h"
 #import "DownloadListenController.h"
 #import "MineTableViewController.h"
+#import "PlayerViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -40,11 +41,14 @@
     UINavigationController *mineNavi = [[UINavigationController alloc]initWithRootViewController:mineC];
     mineC.navigationItem.title=@"个人设置";
     
+    PlayerViewController *player = [[PlayerViewController alloc]initWithCustom];
+    UINavigationController *naviplayer = [[UINavigationController alloc]initWithRootViewController:player];
+    
     UITabBarController *tbc = [UITabBarController new];
-    tbc.viewControllers = @[disNavi,subNavi,downNavi,mineNavi];
-    
+    tbc.viewControllers = @[disNavi,subNavi,naviplayer,downNavi,mineNavi];
+    tbc.tabBar.translucent=NO;
     self.window.rootViewController =tbc;
-    
+    self.window.tintColor=[UIColor redColor];
     return YES;
 }
 

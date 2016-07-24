@@ -58,8 +58,12 @@
     [super viewDidLoad];
     [self.tableView registerClass:[ListenListListCell class] forCellReuseIdentifier:@"ListenListListCell"];
     [NetManager getWMOtherPageById:_Id tagName:_tagName completionHandler:^(id model, NSError *error) {
-        _otherModel = model;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            _otherModel = model;
+            [self.tableView reloadData];
+        }
     }];
 }
 @end

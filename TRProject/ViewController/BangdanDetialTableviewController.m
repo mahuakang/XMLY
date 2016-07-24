@@ -105,10 +105,14 @@
     [self.tableView registerClass:[BangdanDetialAlbumCell class] forCellReuseIdentifier:@"BangdanDetialAlbumCell"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [NetManager getBangdanDetialByType:_contentType key:_key completionHandler:^(id model, NSError *error) {
-            _model=model;
-            self.navigationItem.title =self.model.title;
-            [self.tableView.mj_header endRefreshing];
-            [self.tableView reloadData];
+            if (error) {
+                NSLog(@"网络请求出错，请重新刷新");
+            }else{
+                _model=model;
+                self.navigationItem.title =self.model.title;
+                [self.tableView.mj_header endRefreshing];
+                [self.tableView reloadData];
+            }
         }];
     }];
     

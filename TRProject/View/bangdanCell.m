@@ -158,12 +158,22 @@
             make.top.left.right.equalTo(5);
             make.height.equalTo(40);
         }];
+        
+        //红色小三角
+        UIImageView *imageV = [UIImageView new];
+        [_cellHeadView addSubview:imageV];
+        [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(10);
+            make.centerY.equalTo(0);
+        }];
+        imageV.image = [UIImage imageNamed:@"findsection_logo"];
+        
         UILabel *titlelab = [UILabel new];
         [_cellHeadView addSubview:titlelab];
         titlelab.text = self.datas.title;
         [titlelab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(0);
-            make.left.equalTo(20);
+            make.left.equalTo(imageV.mas_right).equalTo(10);
         }];
         
     }

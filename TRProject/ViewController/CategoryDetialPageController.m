@@ -41,8 +41,12 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [NetManager getWmPageNumById:_Id statMoudle:_statMoudle pageType:_pageType completionHandler:^(id model, NSError *error) {
-        _mod = model;
-        [self reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            _mod = model;
+            [self reloadData];
+        }
     }];
 }
 #pragma mark - WMPageController 代理方法

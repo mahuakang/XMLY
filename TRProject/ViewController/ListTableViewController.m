@@ -10,6 +10,7 @@
 #import "ListModel.h"
 #import "bangdanCell.h"
 #import "NetManager.h"
+#import "AutoWebView.h"
 @interface ListTableViewController()
 @property (nonatomic,strong)UIButton *headView;
 @property (nonatomic,strong)UIImageView *headImage;
@@ -46,9 +47,13 @@
     [self headView];
     [self.tableView registerClass:[bangdanCell class]forCellReuseIdentifier:@"bangdanCell"];
     [NetManager getList:^(id model, NSError *error) {
-        _listModel = model;
-        self.tableView.tableHeaderView = self.headView;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            _listModel = model;
+            self.tableView.tableHeaderView = self.headView;
+            [self.tableView reloadData];
+        }
     }];
 }
 - (UIButton *)headView {
@@ -61,7 +66,10 @@
             make.top.left.equalTo(0);
         }];
         [_headView bk_addEventHandler:^(id sender) {
+            AutoWebView *web = [[AutoWebView alloc]initWithUrl:self.listModel.focusImages.list.firstObject.url];
+            web.navigationItem.title =self.listModel.focusImages.list.firstObject.longTitle ;
             
+            [self.navigationController pushViewController:web animated:YES];
         } forControlEvents:UIControlEventTouchUpInside];
         
         _headImage = [UIImageView new];

@@ -10,6 +10,7 @@
 #import "CategoryCell.h"
 #import "CategoryModel.h"
 #import "NetManager.h"
+#import "CategoryDetialPageController.h"
 @interface CategoryTableViewController()
 @property (nonatomic,strong)UIButton *headView;
 @property (nonatomic,strong)UIImageView *headImage;
@@ -63,10 +64,15 @@
     [self headView];
     [self.tableView registerClass:[CategoryCell class] forCellReuseIdentifier:@"CategoryCell"];
     [NetManager getCategoryList:^(CategoryModel * model, NSError *error) {
-        [self.list addObjectsFromArray:model.list];
-        self.tableView.tableHeaderView =_headView;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            [self.list addObjectsFromArray:model.list];
+            self.tableView.tableHeaderView =_headView;
+            [self.tableView reloadData];
+        }
     }];
+    
 }
 #pragma mark - 懒加载
 - (UIButton *)headView {
@@ -79,7 +85,8 @@
             make.top.left.equalTo(0);
         }];
         [_headView bk_addEventHandler:^(id sender) {
-            
+            CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:self.list[0].Id statMoudle:self.list[0].title pageType:@"发现_分类"];
+            [self.navigationController pushViewController:wmpage animated:YES];
         } forControlEvents:UIControlEventTouchUpInside];
         
         _headImage = [UIImageView new];

@@ -50,8 +50,12 @@
     [self.tableView registerClass:[HeadItemCell class] forCellReuseIdentifier:@"HeadItemCell"];
     [self.tableView registerClass:[ListCell class] forCellReuseIdentifier:@"ListCell"];
     [NetManager getRadioList:^(RadioModel *model, NSError *error) {
-        self.data = model.data;
-        [self.tableView reloadData];
+        if (error) {
+            NSLog(@"网络请求出错，请重新刷新");
+        }else{
+            self.data = model.data;
+            [self.tableView reloadData];
+        }
     }];
 }
 

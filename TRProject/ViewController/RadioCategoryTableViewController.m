@@ -58,10 +58,14 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         _pageNum =1;
         [NetManager getRadioCategoryListById:_Id Page:_pageNum completionHandler:^(RadioCategoryModel* model, NSError *error) {
-            [self.list removeAllObjects];
-            [self.list addObjectsFromArray:model.data.data];
-            [self.tableView.mj_header endRefreshing];
-            [self.tableView reloadData];
+            if (error) {
+                NSLog(@"网络请求出错，请重新刷新");
+            }else{
+                [self.list removeAllObjects];
+                [self.list addObjectsFromArray:model.data.data];
+                [self.tableView.mj_header endRefreshing];
+                [self.tableView reloadData];
+            }   
         }];
     }];
     [self.tableView.mj_header beginRefreshing];

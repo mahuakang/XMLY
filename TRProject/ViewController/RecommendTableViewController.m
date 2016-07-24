@@ -108,12 +108,20 @@
     [self.tableView registerClass:[SpecialListCell class] forCellReuseIdentifier:@"specialList"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [NetManager getRecommendList:^(id model, NSError *error) {
-            self.recommendModel =model;
-            self.tableView.tableHeaderView=self.ic;
-            [self.tableView reloadData];
+            if (error) {
+                NSLog(@"网络请求出错，请重新刷新");
+            }else{
+                self.recommendModel =model;
+                self.tableView.tableHeaderView=self.ic;
+                [self.tableView reloadData];
+            }
         } listcompletionHandler:^(id model, NSError *error) {
-            self.recommendModelList =model;
-            [self.tableView reloadData];
+            if (error) {
+                NSLog(@"网络请求出错，请重新刷新");
+            }else{
+                self.recommendModelList =model;
+                [self.tableView reloadData];
+            }
         }];
         [self.tableView.mj_header endRefreshing];
     }];
