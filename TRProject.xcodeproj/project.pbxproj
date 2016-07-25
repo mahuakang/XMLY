@@ -43,6 +43,7 @@
 		A20D321D1D34C3B500418EEC /* CategoryDetialPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D321C1D34C3B500418EEC /* CategoryDetialPageController.m */; };
 		A20D32201D34C3DA00418EEC /* FirstPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D321F1D34C3DA00418EEC /* FirstPageTableViewController.m */; };
 		A20D32231D34C3E900418EEC /* OtherPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */; };
+		A221B2741D45E8010092952F /* UIImage+SetImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = A221B2731D45E8010092952F /* UIImage+SetImageSize.m */; };
 		A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564481D2E4AA7004A504B /* WMPageNumModel.m */; };
 		A235644C1D2E4E37004A504B /* Horizontal3on1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644B1D2E4E37004A504B /* Horizontal3on1Cell.m */; };
 		A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A235644E1D2F48E4004A504B /* HorizontalItemCell.m */; };
@@ -142,6 +143,8 @@
 		A20D321F1D34C3DA00418EEC /* FirstPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTableViewController.m; sourceTree = "<group>"; };
 		A20D32211D34C3E900418EEC /* OtherPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherPageTableViewController.h; sourceTree = "<group>"; };
 		A20D32221D34C3E900418EEC /* OtherPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherPageTableViewController.m; sourceTree = "<group>"; };
+		A221B2721D45E8010092952F /* UIImage+SetImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SetImageSize.h"; sourceTree = "<group>"; };
+		A221B2731D45E8010092952F /* UIImage+SetImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SetImageSize.m"; sourceTree = "<group>"; };
 		A23564471D2E4AA7004A504B /* WMPageNumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageNumModel.h; sourceTree = "<group>"; };
 		A23564481D2E4AA7004A504B /* WMPageNumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageNumModel.m; sourceTree = "<group>"; };
 		A235644A1D2E4E37004A504B /* Horizontal3on1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal3on1Cell.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				382C11821C7E8CDD00F34BB0 /* AppDelegate+System.m */,
 				382C97681C81D686003D1D51 /* UIView+HUD.h */,
 				382C97691C81D686003D1D51 /* UIView+HUD.m */,
+				A221B2721D45E8010092952F /* UIImage+SetImageSize.h */,
+				A221B2731D45E8010092952F /* UIImage+SetImageSize.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -817,6 +822,7 @@
 				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
 				A20406371D321839003A9934 /* AlbumTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A221B2741D45E8010092952F /* UIImage+SetImageSize.m in Sources */,
 				A20D32231D34C3E900418EEC /* OtherPageTableViewController.m in Sources */,
 				A20406321D320E7F003A9934 /* AlbumDetialListModel.m in Sources */,
 				A204062C1D31F002003A9934 /* DownloadListenController.m in Sources */,

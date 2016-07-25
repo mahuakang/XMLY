@@ -12,8 +12,7 @@
 #import "NetManager.h" 
 #import "BangdanDetialModel.h"
 #import "AlbumTableViewController.h"
-@import AVKit;
-@import AVFoundation;
+#import "PlayerViewController.h"
 @interface BangdanDetialTableviewController()
 @property (nonatomic,strong)BangdanDetialModel *model;
 @end
@@ -79,11 +78,12 @@
         [self.navigationController pushViewController:alvc animated:YES];
         
     }else if([_contentType isEqualToString:@"track"]){
-        AVPlayerViewController *avc = [AVPlayerViewController new];
-        avc.player = [AVPlayer playerWithURL:self.model.list[indexPath.row].playPath64.yx_URL];
-        [avc.player play];
-        [self presentViewController:avc animated:YES completion:nil];
         
+        BangdanDetialModelList *list = self.model.list[indexPath.row];
+        UINavigationController *navi =self.tabBarController.viewControllers[2];
+        PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+        [pv3 playFMWithPlayurl:list.playPath64 picurl:list.coverSmall coversmall:list.coverSmall Title:list.tags nickname:list.nickname  detial:list.title duraTime:list.duration];
+        [self.tabBarController setSelectedIndex:2];
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

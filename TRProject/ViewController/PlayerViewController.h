@@ -17,8 +17,9 @@
 @property (nonatomic,strong)AVPlayer *avplay;
 @property (nonatomic,strong)NSString *playurl;
 @property (nonatomic,assign)NSInteger duraTime;
+@property (nonatomic,copy)NSString *nickname;
 
 - (instancetype)initWithCustom;
-- (void)playFMWithPlayurl:(NSString *)playurl picurl:(NSString *)picurl coversmall:(NSString *)coversmall Title:(NSString *)Title detial:(NSString *)detial duraTime:(NSInteger)duraTime;
+- (void)playFMWithPlayurl:(NSString *)playurl picurl:(NSString *)picurl coversmall:(NSString *)coversmall Title:(NSString *)Title nickname:(NSString*)nickname detial:(NSString *)detial duraTime:(NSInteger)duraTime;
 
 @end

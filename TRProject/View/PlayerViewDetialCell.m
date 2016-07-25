@@ -42,7 +42,10 @@
         [_bottombottomLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.bottomLb);
             make.top.equalTo(self.bottomLb.mas_bottom).equalTo(20);
+            make.right.equalTo(0);
+            
         }];
+        _bottombottomLab.numberOfLines=2;
         _bottombottomLab.textColor = [UIColor grayColor];
     }
     return _bottombottomLab;

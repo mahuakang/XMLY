@@ -103,8 +103,7 @@
 
 @end
 /*=======================RadiosCell end=============================*/
-@import AVKit;
-@import AVFoundation;
+
 @interface ListCell()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UIView *cellHeadView;
 @property (nonatomic,strong)UIButton *button;
@@ -146,14 +145,14 @@
         RadioModelCategoriesLocalradios *radioDetial = self.data.localRadios[indexPath.row];
         UINavigationController *navi =self.viewController.tabBarController.viewControllers[2];
         PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
-        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverLarge Title:radioDetial.name detial:radioDetial.programName duraTime:360];
+        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverSmall Title:radioDetial.name nickname:radioDetial.name   detial:[NSString stringWithFormat:@"正在直播:%@",radioDetial.programName] duraTime:360];
         [self.viewController.tabBarController setSelectedIndex:2];
         
     }else{
         RadioModelDataTopradios *radioDetial = self.data.topRadios[indexPath.row];
         UINavigationController *navi =self.viewController.tabBarController.viewControllers[2];
         PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
-        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverLarge Title:radioDetial.name detial:radioDetial.programName duraTime:360];
+        [pv3 playFMWithPlayurl:radioDetial.playUrl.aac24 picurl:radioDetial.coverLarge coversmall:radioDetial.coverLarge Title:radioDetial.name nickname:radioDetial.name detial:radioDetial.programName duraTime:360];
         [self.viewController.tabBarController setSelectedIndex:2];
     }
 }

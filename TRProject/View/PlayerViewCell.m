@@ -9,6 +9,8 @@
 #import "PlayerViewCell.h"
 @interface PlayerViewCell()
 @property (nonatomic,strong)UIView *bottomView;
+@property (nonatomic,strong)UIView *currentView;
+@property (nonatomic,strong)UIView *totalView;
 @end
 
 @implementation PlayerViewCell
@@ -18,10 +20,66 @@
         [self bottomView];
         [self btn];
         [self slider];
+        [self currentView];
+        [self totalView];
     }
     return self;
 }
 #pragma mark - 懒加载
+- (UIView *)currentView {
+    if(_currentView == nil) {
+        _currentView = [[UIView alloc] init];
+        [self.contentView addSubview:_currentView];
+        [_currentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(0);
+            make.bottom.equalTo(self.imageV).equalTo(-20);
+            make.width.equalTo(50);
+            make.height.equalTo(20);
+        }];
+        _currentView.backgroundColor = kRGBColor(1, 1, 1, 0.1);
+    }
+    return _currentView;
+}
+
+- (UILabel *)currenttimeLab {
+    if(_currenttimeLab == nil) {
+        _currenttimeLab = [[UILabel alloc] init];
+        [self.currentView addSubview:_currenttimeLab];
+        [_currenttimeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(0);
+            make.bottom.equalTo(self.currentView);
+        }];
+        _currenttimeLab.textColor = [UIColor whiteColor];
+    }
+    return _currenttimeLab;
+}
+- (UIView *)totalView {
+    if(_totalView == nil) {
+        _totalView = [[UIView alloc] init];
+        [self.contentView addSubview:_totalView];
+        [_totalView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(0);
+            make.bottom.equalTo(self.currenttimeLab);
+            make.width.equalTo(50);
+            make.height.equalTo(20);
+        }];
+        _totalView.backgroundColor = kRGBColor(1, 1, 1, 0.1);
+    }
+    return _totalView;
+}
+- (UILabel *)totaltimeLab {
+    if(_totaltimeLab == nil) {
+        _totaltimeLab = [[UILabel alloc] init];
+        [self.totalView addSubview:_totaltimeLab];
+        [_totaltimeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(0);
+            make.bottom.equalTo(self.currenttimeLab);
+        }];
+        _totaltimeLab.textColor = [UIColor whiteColor];
+    }
+    return _totaltimeLab;
+}
+
 - (UIImageView *)imageV {
     if(_imageV == nil) {
         _imageV = [UIImageView new];
@@ -72,26 +130,10 @@
             make.center.equalTo(0);
             make.height.width.equalTo(40);
         }];
-        _isplay = YES;
-        [_btn setImage:[UIImage imageNamed:@"btn_prelisten_pause"] forState:UIControlStateNormal];
-        [_btn bk_addEventHandler:^(UIButton * sender) {
-            if(_isplay){
-                [self.avplay pause];
-                _isplay = NO;
-                [sender setImage:[UIImage imageNamed:@"playbtn"] forState:UIControlStateNormal];
-            }else{
-                [self.avplay play];
-                _isplay =YES;
-                [sender setImage:[UIImage imageNamed:@"btn_prelisten_pause"] forState:UIControlStateNormal];
-            }
-        } forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return _btn;
 }
-
-
-
-
 
 
 

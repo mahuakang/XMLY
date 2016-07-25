@@ -134,6 +134,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([_datas.title isEqualToString:@"主播榜单"]) {
+        
     }else{
         BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType: self.datas.list[indexPath.row].contentType key: self.datas.list[indexPath.row].key];
         [self.viewController.navigationController pushViewController:bdtvc animated:YES];

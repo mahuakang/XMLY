@@ -13,6 +13,7 @@
 #import "ListenListListCell.h"
 #import "AlbumListCell.h"
 #import "AlbumTableViewController.h"
+#import "PlayerViewController.h"
 @import AVKit;
 @import AVFoundation;
 @interface ListenListTableViewController ()
@@ -84,10 +85,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==1) {
         if (_listenListModel.info.contentType==2) {
-            AVPlayerViewController *avc = [AVPlayerViewController new];
-            avc.player = [AVPlayer playerWithURL:self.listenListModel.list[indexPath.row].playPath64.yx_URL];
-            [avc.player play];
-            [self presentViewController:avc animated:YES completion:nil];
+            ListenListModelList *list = self.listenListModel.list[indexPath.row];
+            UINavigationController *navi =self.tabBarController.viewControllers[2];
+            PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+            [pv3 playFMWithPlayurl:list.playPath64 picurl:list.coverSmall coversmall:list.coverSmall Title:list.title nickname:list.nickname  detial:list.title duraTime:list.duration];
+            [self.tabBarController setSelectedIndex:2];
         }else{
             AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:self.listenListModel.list[indexPath.row].Id statMoudle:@"听单详情" pageType:@(_listenListModel.info.specialId).stringValue];
             [self.navigationController pushViewController:atvc animated:YES];

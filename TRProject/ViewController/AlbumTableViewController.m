@@ -12,6 +12,7 @@
 #import "AlbumDetialModel.h"
 #import "AlbumHeadCell.h"
 #import "AlbumListCell.h"
+#import "PlayerViewController.h"
 @import AVKit;
 @import AVFoundation;
 @interface AlbumTableViewController()
@@ -88,11 +89,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section ==1) {
-        AVPlayerViewController *avc = [AVPlayerViewController new];
-        avc.player = [AVPlayer playerWithURL:self.adlModel.data.tracks.list[indexPath.row].playUrl64.yx_URL];
         
-        [avc.player play];
-        [self presentViewController:avc animated:YES completion:nil];
+        AlbumDetialListModelDataTracksList *list = self.adlModel.data.tracks.list[indexPath.row];
+        UINavigationController *navi =self.tabBarController.viewControllers[2];
+        PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+        [pv3 playFMWithPlayurl:list.playUrl64 picurl:self.adlModel.data.album.coverOrigin coversmall:list.coverSmall Title:self.adlModel.data.album.title nickname:list.nickname  detial:list.title duraTime:list.duration];
+        [self.tabBarController setSelectedIndex:2];
     }
 }
 #pragma mark -  初始化

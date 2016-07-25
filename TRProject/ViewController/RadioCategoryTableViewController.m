@@ -10,8 +10,8 @@
 #import "NetManager.h"
 #import "ListCell.h"
 #import "RadioCategoryModel.h"
-@import AVKit;
-@import AVFoundation;
+#import "PlayerViewController.h"
+
 @interface RadioCategoryTableViewController()
 @property (nonatomic,strong)NSMutableArray <RadioCategoryModelDataData *>*list;
 @property (nonatomic,assign)NSInteger pageNum;
@@ -35,10 +35,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    AVPlayerViewController *avc = [AVPlayerViewController new];
-    avc.player = [AVPlayer playerWithURL:self.list[indexPath.row].playUrl.aac24.yx_URL];
-    [avc.player play];
-    [self presentViewController:avc animated:YES completion:nil];
+    
+    RadioCategoryModelDataData *list = self.list[indexPath.row];
+    UINavigationController *navi =self.tabBarController.viewControllers[2];
+    PlayerViewController *pv3 = (PlayerViewController*)navi.topViewController;
+    [pv3 playFMWithPlayurl:list.playUrl.aac64 picurl:list.coverSmall coversmall:list.coverSmall Title:_name nickname:list.name  detial:[NSString stringWithFormat:@"正在直播:%@",list.programName] duraTime:300];
+    [self.tabBarController setSelectedIndex:2];
 }
 #pragma mark -  初始化
 - (instancetype)initWithId:(NSInteger)Id CategoryName:(NSString*)name{
