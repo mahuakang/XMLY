@@ -15,11 +15,11 @@
     self= [super init];
     if (self ) {
         _itemDetial = itemDetial;
-        UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 150)];
+        UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 100)];
         [self.contentView addSubview:sc];
         sc.pagingEnabled =YES;
         sc.showsHorizontalScrollIndicator=NO;
-        CGFloat btnW= kScreenW /5;
+        CGFloat btnW= kScreenW /7;
         for (int i=0;i<_itemDetial.count;i++) {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [sc addSubview:btn];
@@ -31,6 +31,7 @@
             [btn bk_addEventHandler:^(id sender) {
                 
             } forControlEvents:UIControlEventTouchUpInside];
+            
             UIImageView *imageV = [[UIImageView alloc]init];
             [btn addSubview:imageV];
             [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -48,6 +49,7 @@
                 make.top.equalTo(btn.mas_bottom).equalTo(10);
                 make.width.equalTo(btn);
             }];
+            lab.font = [UIFont systemFontOfSize:13];
             lab.textAlignment = NSTextAlignmentCenter;
             lab.text = _itemDetial[i].title;
         }

@@ -14,8 +14,8 @@
 #import "AlbumListCell.h"
 #import "AlbumTableViewController.h"
 #import "PlayerViewController.h"
-@import AVKit;
-@import AVFoundation;
+#import "ListenListHeadView.h"
+
 @interface ListenListTableViewController ()
 @property (nonatomic,strong)ListenListModel *listenListModel;
 @end
@@ -29,6 +29,7 @@
     return section==0?1:self.listenListModel.list.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    tableView.separatorStyle=NO;
     if (indexPath.section==0) {
         ListenListHeadCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"ListenListHeadCell" forIndexPath:indexPath];
         cell.imageV.image = [UIImage imageNamed:@"findsubject_cover"];
@@ -49,6 +50,7 @@
             ?[NSString stringWithFormat:@"%@:%@",list.duration/60>10?@(list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration/60],list.duration%60>10?@(list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration%60]]
             :[NSString stringWithFormat:@"00:%ld",list.duration];
             cell.commentsLab.text = @(list.commentsCounts).stringValue;
+            [cell bottonLine];
             return cell;
         }else if(_listenListModel.info.contentType==1){
             ListenListListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListenListListCell" forIndexPath:indexPath];
@@ -57,6 +59,7 @@
             cell.midLab.text = _listenListModel.list[indexPath.row].intro;
             cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
             cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
+            
             return cell;
         }
     }
@@ -97,10 +100,21 @@
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 1;
+    return section==0?0.1:30;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 10;
+    return 15;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return nil;
+    }else{
+        ListenListHeadView *head = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"ListenListHeadView"];
+        head.contentView.backgroundColor = [UIColor whiteColor];
+        head.lab.text = @"听单列表";
+        head.imageV.image= [UIImage imageNamed:@"findsection_logo"];
+        return head;
+    }
 }
 #pragma mark -  初始化
 - (instancetype)initWithList:(NSInteger)Id statMoudle:(NSString *)statMoudle pageType:(NSString *)pageType{
@@ -122,6 +136,7 @@
     [self.tableView registerClass:[ListenListHeadCell class] forCellReuseIdentifier:@"ListenListHeadCell"];
     [self.tableView registerClass:[ListenListListCell  class] forCellReuseIdentifier:@"ListenListListCell"];
     [self.tableView registerClass:[AlbumListCell  class] forCellReuseIdentifier:@"AlbumListCell"];
+    [self.tableView registerClass:[ListenListHeadView class] forHeaderFooterViewReuseIdentifier:@"ListenListHeadView"];
     [NetManager getListenListList:_Id statMoudle:_statMoudle pageType:_pageType completionHandler:^(id model, NSError *error) {
         if (error) {
             NSLog(@"网络请求出错，请重新刷新");

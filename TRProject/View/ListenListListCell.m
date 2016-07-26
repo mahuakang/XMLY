@@ -89,4 +89,18 @@
     return _imageV;
 }
 
+- (UIView *)bottonLine {
+    if(_bottonLine == nil) {
+        _bottonLine = [[UIView alloc] init];
+        [self.contentView addSubview:_bottonLine];
+        [_bottonLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.playCountsLab);
+            make.right.equalTo(0);
+            make.height.equalTo(1);
+            make.bottom.equalTo(0);
+        }];
+        _bottonLine.backgroundColor =kRGBColor(1, 1, 1, 0.1);
+    }
+    return _bottonLine;
+}
 @end

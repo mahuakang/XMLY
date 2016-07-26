@@ -27,6 +27,7 @@
             make.left.equalTo(5);
             make.height.width.equalTo(50);
         }];
+        
         _imageV.contentMode = UIViewContentModeScaleToFill;
     }
     return _imageV;
@@ -114,6 +115,8 @@
             make.height.width.equalTo(30);
             make.bottom.equalTo(-15);
         }];
+        _nickimage.layer.cornerRadius = 15;
+        _nickimage.clipsToBounds = YES;
         _nickimage.contentMode = UIViewContentModeScaleToFill;
     }
     return _nickimage;

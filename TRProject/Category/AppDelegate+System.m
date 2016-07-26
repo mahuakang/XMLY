@@ -13,6 +13,9 @@
 
 #pragma mark - 方法
 - (void)setupGlobalConfig{
+    
+    
+    
     /*==================== 电池条显示菊花,监测网络活动 =======================*/
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;

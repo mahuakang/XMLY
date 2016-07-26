@@ -15,6 +15,6 @@
 @property (nonatomic,strong)UILabel *midLab;
 @property (nonatomic,strong)UILabel *playCountsLab;
 @property (nonatomic,strong)UILabel *tracksCounts;
-
+@property (nonatomic,strong)UIView *bottonLine;
 
 @end

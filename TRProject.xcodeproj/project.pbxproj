@@ -61,6 +61,8 @@
 		A2C6EC301D33A7CF0000E250 /* ListenListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC2F1D33A7CF0000E250 /* ListenListModel.m */; };
 		A2C6EC331D33AB590000E250 /* ListenListHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC321D33AB590000E250 /* ListenListHeadCell.m */; };
 		A2C6EC361D33AB8E0000E250 /* ListenListListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C6EC351D33AB8E0000E250 /* ListenListListCell.m */; };
+		A2CAB68E1D47492100A71D66 /* AlbumSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAB68D1D47492100A71D66 /* AlbumSectionHeadView.m */; };
+		A2CAB6911D474CD100A71D66 /* ListenListHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAB6901D474CD100A71D66 /* ListenListHeadView.m */; };
 		A2E32A891D30C52C002226B2 /* HeadItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A881D30C52C002226B2 /* HeadItemCell.m */; };
 		A2E32A8C1D30C545002226B2 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A8B1D30C545002226B2 /* ListCell.m */; };
 		A2E32A8F1D30E292002226B2 /* bangdanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E32A8E1D30E292002226B2 /* bangdanCell.m */; };
@@ -179,6 +181,10 @@
 		A2C6EC321D33AB590000E250 /* ListenListHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenListHeadCell.m; sourceTree = "<group>"; };
 		A2C6EC341D33AB8E0000E250 /* ListenListListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenListListCell.h; sourceTree = "<group>"; };
 		A2C6EC351D33AB8E0000E250 /* ListenListListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenListListCell.m; sourceTree = "<group>"; };
+		A2CAB68C1D47492100A71D66 /* AlbumSectionHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumSectionHeadView.h; sourceTree = "<group>"; };
+		A2CAB68D1D47492100A71D66 /* AlbumSectionHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumSectionHeadView.m; sourceTree = "<group>"; };
+		A2CAB68F1D474CD100A71D66 /* ListenListHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenListHeadView.h; sourceTree = "<group>"; };
+		A2CAB6901D474CD100A71D66 /* ListenListHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenListHeadView.m; sourceTree = "<group>"; };
 		A2E32A871D30C52C002226B2 /* HeadItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadItemCell.h; sourceTree = "<group>"; };
 		A2E32A881D30C52C002226B2 /* HeadItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadItemCell.m; sourceTree = "<group>"; };
 		A2E32A8A1D30C545002226B2 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
@@ -275,14 +281,13 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A267BB7C1D46F9720023B01E /* 其他 */,
 				A20406331D3210A4003A9934 /* 详情页 */,
 				A20D15571D2D0C6500DBBFC2 /* 发现 */,
 				A204061E1D31EEB4003A9934 /* 订阅听 */,
 				A20406211D31EECD003A9934 /* 播放页 */,
 				A204061F1D31EEBE003A9934 /* 下载听 */,
 				A20406201D31EEC4003A9934 /* 我的 */,
-				A29E4BA21D4329E100C6543B /* AutoWebView.h */,
-				A29E4BA31D4329E100C6543B /* AutoWebView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -440,6 +445,8 @@
 				A204063B1D321C46003A9934 /* AlbumHeadCell.m */,
 				A204063D1D321C55003A9934 /* AlbumListCell.h */,
 				A204063E1D321C55003A9934 /* AlbumListCell.m */,
+				A2CAB68C1D47492100A71D66 /* AlbumSectionHeadView.h */,
+				A2CAB68D1D47492100A71D66 /* AlbumSectionHeadView.m */,
 			);
 			name = "专辑详情";
 			sourceTree = "<group>";
@@ -550,6 +557,15 @@
 			name = "榜单_详情";
 			sourceTree = "<group>";
 		};
+		A267BB7C1D46F9720023B01E /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				A29E4BA21D4329E100C6543B /* AutoWebView.h */,
+				A29E4BA31D4329E100C6543B /* AutoWebView.m */,
+			);
+			name = "其他";
+			sourceTree = "<group>";
+		};
 		A2750F561D3874DB003FE6F5 /* 广播_详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +591,8 @@
 				A2C6EC321D33AB590000E250 /* ListenListHeadCell.m */,
 				A2C6EC341D33AB8E0000E250 /* ListenListListCell.h */,
 				A2C6EC351D33AB8E0000E250 /* ListenListListCell.m */,
+				A2CAB68F1D474CD100A71D66 /* ListenListHeadView.h */,
+				A2CAB6901D474CD100A71D66 /* ListenListHeadView.m */,
 			);
 			name = "听单详情";
 			sourceTree = "<group>";
@@ -788,6 +806,7 @@
 				A204062F1D31F042003A9934 /* SubscibeController.m in Sources */,
 				A23564531D2F4967004A504B /* SpecialListCell.m in Sources */,
 				A2C6EC301D33A7CF0000E250 /* ListenListModel.m in Sources */,
+				A2CAB6911D474CD100A71D66 /* ListenListHeadView.m in Sources */,
 				A20D15671D2D125E00DBBFC2 /* NetManager.m in Sources */,
 				A26756441D3CBEDD00791F04 /* BangdanDetialTrackCell.m in Sources */,
 				A20D321A1D34C37E00418EEC /* WMOtherPageModel.m in Sources */,
@@ -795,6 +814,7 @@
 				A20D154D1D2D0BCF00DBBFC2 /* CategoryModel.m in Sources */,
 				A20D156B1D2D1E5B00DBBFC2 /* AlbumDetialModel.m in Sources */,
 				A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */,
+				A2CAB68E1D47492100A71D66 /* AlbumSectionHeadView.m in Sources */,
 				A20406261D31EFAE003A9934 /* PlayerViewController.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,

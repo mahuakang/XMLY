@@ -12,6 +12,9 @@
 #import "NetManager.h"
 #import "SpecialListCell.h"
 #import "HorizontalItemCell.h"
+#import "PlayerViewController.h"
+#import "ListenListTableViewController.h"
+#import "AlbumTableViewController.h"
 @interface RecommendTableViewController()<iCarouselDelegate,iCarouselDataSource>
 @property (nonatomic,strong)iCarousel *ic;
 @property (nonatomic,strong)UIPageControl *pc;
@@ -48,6 +51,32 @@
     }
     return value;
 }
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
+    RecommendModelFoculsimagesList *list =self.recommendModel.focusImages.list[index];
+    //    switch (list.type) {
+    //        case 2://付费专辑
+    //            break;
+    //        case 3://播放
+    //            
+    //            break;
+    //        case 4://普通专辑
+    //            break;
+    //        case 9://听单详情
+    //            
+    //            break;
+    //        case 11://直播页面
+    //            break;
+    //        default:
+    //            break;
+    //    }老子不玩了
+    if (list.type==9) {
+        ListenListTableViewController *lltvc = [[ListenListTableViewController alloc]initWithList:693 statMoudle:list.shortTitle pageType:@"发现_推荐"];
+        [self.navigationController pushViewController:lltvc animated:YES];
+    }else if(list.type==2){
+        AlbumTableViewController *atvc = [[AlbumTableViewController alloc]initWithList:list.Id statMoudle:@"听单详情" pageType:@"q"];
+        [self.navigationController pushViewController:atvc animated:YES];
+    }
+}
 #pragma mark - Tableview 代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3+self.recommendModelList.hotRecommends.list.count;
@@ -83,7 +112,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
         case 0:
-            return 150;
+            return 100;
         case 2:
             if (self.recommendModel.specialColumn.list.firstObject) {
                 return 240;
