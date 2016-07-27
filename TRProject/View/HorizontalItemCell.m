@@ -4,11 +4,6 @@
 #import "BangdanDetialTableviewController.h"
 #define btnG 30
 
-
-
-
-
-
 @interface HorizontalItemCell ()
 
 @end
@@ -45,7 +40,7 @@
                         BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType:@"album"  key: @"1_21_ranking:album:subscribed:30:0"];
                         [self.viewController.navigationController pushViewController:bdtvc animated:YES];
                     }else if([_itemDetial[i].title isEqualToString:@"热门分享"]){
-                        BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType:@"track"  key: @"1_54_ranking:track:shared:1:0 "];
+                        BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType:@"track"  key: @"1_54_ranking:track:shared:1:0"];
                         [self.viewController.navigationController pushViewController:bdtvc animated:YES];
                     }
                 }
