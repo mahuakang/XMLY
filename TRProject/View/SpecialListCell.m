@@ -8,6 +8,7 @@
 
 #import "SpecialListCell.h"
 #import "ListenListTableViewController.h"
+#import "SpecialListMoreTableViewController.h"
 /*===============================specialCell begin======================*/
 
 @implementation specialCell
@@ -19,8 +20,10 @@
         _bottomLab.textColor = [UIColor grayColor];
         [_bottomLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.topLab);
-            make.bottom.equalTo(self.imagev);
+            make.top.equalTo(self.midLab.mas_bottom).equalTo(10);
+            make.bottom.equalTo(-10);
         }];
+        _bottomLab.font = [UIFont systemFontOfSize:13];
     }
     return _bottomLab;
 }
@@ -29,13 +32,14 @@
     if(_midLab == nil) {
         _midLab = [[UILabel alloc] init];
         [self.contentView addSubview:_midLab];
-        _midLab.numberOfLines=1;
+        _midLab.numberOfLines=2;
         _midLab.textColor = [UIColor grayColor];
         [_midLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.topLab);
             make.right.equalTo(-5);
             make.top.equalTo(self.topLab.mas_bottom).equalTo(5);
         }];
+        _midLab.font = [UIFont systemFontOfSize:14];
     }
     return _midLab;
 }
@@ -44,7 +48,7 @@
     if(_topLab == nil) {
         _topLab = [[UILabel alloc] init];
         [self.contentView addSubview:_topLab];
-        _topLab.numberOfLines=1;
+        _topLab.numberOfLines=2;
         [_topLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.imagev.mas_right).equalTo(10);
             make.right.equalTo(-5);
@@ -59,7 +63,7 @@
         _imagev = [[UIImageView alloc] init];
         [self.contentView addSubview:_imagev];
         [_imagev mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.width.equalTo(80);
+            make.height.width.equalTo(kScreenW/5);
             make.top.left.equalTo(5);
         }];
         _imagev.contentMode = UIViewContentModeScaleToFill;
@@ -88,9 +92,15 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return [tableView fd_heightForCellWithIdentifier:@"specialCell" configuration:^(specialCell* cell) {
+        [cell.imagev setImageURL:self.specialColumn.list[indexPath.row].coverPath.yx_URL];
+        cell.topLab.text=self.specialColumn.list[indexPath.row].title;
+        cell.midLab.text = self.specialColumn.list[indexPath.row].subtitle;
+        cell.bottomLab.text  = self.specialColumn.list[indexPath.row].footnote;
+    }];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ListenListTableViewController *lltvc = [[ListenListTableViewController alloc]initWithList:self.specialColumn.list[indexPath.row].specialId statMoudle:self.specialColumn.title pageType:@"发现_推荐"];
     [self.viewController.navigationController pushViewController:lltvc animated:YES];
 }
@@ -138,10 +148,11 @@
             make.right.equalTo(-30);
             make.centerY.equalTo(0);
         }];
-        [button setTitle:@"更多" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"findsection_more_h"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"findsection_more_n"] forState:UIControlStateHighlighted];
         [button bk_addEventHandler:^(id sender) {
-            NSLog(@"q");
+            SpecialListMoreTableViewController *vc = [[SpecialListMoreTableViewController alloc]init];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _cellHeadView;

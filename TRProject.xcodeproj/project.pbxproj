@@ -50,6 +50,12 @@
 		A23564531D2F4967004A504B /* SpecialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564521D2F4967004A504B /* SpecialListCell.m */; };
 		A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564551D2F4BEE004A504B /* DiscorverPageController.m */; };
 		A235645A1D2FA2BD004A504B /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A23564591D2FA2BD004A504B /* CategoryCell.m */; };
+		A250E71E1D487D7700FF9B93 /* SpecialListMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A250E71D1D487D7700FF9B93 /* SpecialListMoreTableViewController.m */; };
+		A250E7211D488FEF00FF9B93 /* FocusimageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A250E7201D488FEF00FF9B93 /* FocusimageModel.m */; };
+		A259D8561D479C1F0086274F /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A259D8551D479C1F0086274F /* MainTabBarViewController.m */; };
+		A259D87D1D485C630086274F /* EditRecommendMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A259D87C1D485C630086274F /* EditRecommendMoreModel.m */; };
+		A259D8801D485C710086274F /* SpecialListMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A259D87F1D485C710086274F /* SpecialListMoreModel.m */; };
+		A259D8841D485F060086274F /* EditMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A259D8831D485F060086274F /* EditMoreTableViewController.m */; };
 		A267563C1D3CB9D100791F04 /* BangdanDetialTableviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A267563B1D3CB9D100791F04 /* BangdanDetialTableviewController.m */; };
 		A26756401D3CBB3500791F04 /* BangdanDetialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A267563F1D3CBB3500791F04 /* BangdanDetialModel.m */; };
 		A26756441D3CBEDD00791F04 /* BangdanDetialTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26756431D3CBEDD00791F04 /* BangdanDetialTrackCell.m */; };
@@ -159,6 +165,18 @@
 		A23564551D2F4BEE004A504B /* DiscorverPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscorverPageController.m; sourceTree = "<group>"; };
 		A23564581D2FA2BD004A504B /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		A23564591D2FA2BD004A504B /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		A250E71C1D487D7700FF9B93 /* SpecialListMoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialListMoreTableViewController.h; sourceTree = "<group>"; };
+		A250E71D1D487D7700FF9B93 /* SpecialListMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialListMoreTableViewController.m; sourceTree = "<group>"; };
+		A250E71F1D488FEF00FF9B93 /* FocusimageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusimageModel.h; sourceTree = "<group>"; };
+		A250E7201D488FEF00FF9B93 /* FocusimageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusimageModel.m; sourceTree = "<group>"; };
+		A259D8541D479C1F0086274F /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		A259D8551D479C1F0086274F /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		A259D87B1D485C630086274F /* EditRecommendMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRecommendMoreModel.h; sourceTree = "<group>"; };
+		A259D87C1D485C630086274F /* EditRecommendMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRecommendMoreModel.m; sourceTree = "<group>"; };
+		A259D87E1D485C710086274F /* SpecialListMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialListMoreModel.h; sourceTree = "<group>"; };
+		A259D87F1D485C710086274F /* SpecialListMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialListMoreModel.m; sourceTree = "<group>"; };
+		A259D8821D485F060086274F /* EditMoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMoreTableViewController.h; sourceTree = "<group>"; };
+		A259D8831D485F060086274F /* EditMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMoreTableViewController.m; sourceTree = "<group>"; };
 		A267563A1D3CB9D100791F04 /* BangdanDetialTableviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialTableviewController.h; sourceTree = "<group>"; };
 		A267563B1D3CB9D100791F04 /* BangdanDetialTableviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangdanDetialTableviewController.m; sourceTree = "<group>"; };
 		A267563E1D3CBB3500791F04 /* BangdanDetialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangdanDetialModel.h; sourceTree = "<group>"; };
@@ -281,6 +299,8 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A259D8541D479C1F0086274F /* MainTabBarViewController.h */,
+				A259D8551D479C1F0086274F /* MainTabBarViewController.m */,
 				A267BB7C1D46F9720023B01E /* 其他 */,
 				A20406331D3210A4003A9934 /* 详情页 */,
 				A20D15571D2D0C6500DBBFC2 /* 发现 */,
@@ -405,6 +425,7 @@
 		A20406331D3210A4003A9934 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
+				A259D8811D485E9E0086274F /* 推荐_更多 */,
 				A26756391D3CB99500791F04 /* 榜单_详情 */,
 				A2750F561D3874DB003FE6F5 /* 广播_详情 */,
 				A2C6EC2D1D33A7440000E250 /* 分类_详情 */,
@@ -479,6 +500,8 @@
 				A20D154F1D2D0BDF00DBBFC2 /* RadioModel.m */,
 				A20D15511D2D0BEC00DBBFC2 /* ListModel.h */,
 				A20D15521D2D0BEC00DBBFC2 /* ListModel.m */,
+				A250E71F1D488FEF00FF9B93 /* FocusimageModel.h */,
+				A250E7201D488FEF00FF9B93 /* FocusimageModel.m */,
 			);
 			name = "发现";
 			sourceTree = "<group>";
@@ -486,6 +509,7 @@
 		A20D15681D2D1D5B00DBBFC2 /* 详情页 */ = {
 			isa = PBXGroup;
 			children = (
+				A259D87A1D485C140086274F /* 推荐_更多 */,
 				A267563D1D3CBB0D00791F04 /* 榜单_详情 */,
 				A2750F5A1D38757D003FE6F5 /* 广播_详情 */,
 				A20406341D32113D003A9934 /* 分类_详情 */,
@@ -526,6 +550,28 @@
 				A23564591D2FA2BD004A504B /* CategoryCell.m */,
 			);
 			name = "发现_分类";
+			sourceTree = "<group>";
+		};
+		A259D87A1D485C140086274F /* 推荐_更多 */ = {
+			isa = PBXGroup;
+			children = (
+				A259D87B1D485C630086274F /* EditRecommendMoreModel.h */,
+				A259D87C1D485C630086274F /* EditRecommendMoreModel.m */,
+				A259D87E1D485C710086274F /* SpecialListMoreModel.h */,
+				A259D87F1D485C710086274F /* SpecialListMoreModel.m */,
+			);
+			name = "推荐_更多";
+			sourceTree = "<group>";
+		};
+		A259D8811D485E9E0086274F /* 推荐_更多 */ = {
+			isa = PBXGroup;
+			children = (
+				A259D8821D485F060086274F /* EditMoreTableViewController.h */,
+				A259D8831D485F060086274F /* EditMoreTableViewController.m */,
+				A250E71C1D487D7700FF9B93 /* SpecialListMoreTableViewController.h */,
+				A250E71D1D487D7700FF9B93 /* SpecialListMoreTableViewController.m */,
+			);
+			name = "推荐_更多";
 			sourceTree = "<group>";
 		};
 		A26756391D3CB99500791F04 /* 榜单_详情 */ = {
@@ -826,15 +872,19 @@
 				A20D15531D2D0BEC00DBBFC2 /* ListModel.m in Sources */,
 				A204063F1D321C55003A9934 /* AlbumListCell.m in Sources */,
 				A204063C1D321C46003A9934 /* AlbumHeadCell.m in Sources */,
+				A259D8561D479C1F0086274F /* MainTabBarViewController.m in Sources */,
+				A259D8841D485F060086274F /* EditMoreTableViewController.m in Sources */,
 				A20D15561D2D0C5000DBBFC2 /* RecommendTableViewController.m in Sources */,
 				A26756471D3CC19100791F04 /* BangdanDetialAlbumCell.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
+				A250E7211D488FEF00FF9B93 /* FocusimageModel.m in Sources */,
 				A20D155E1D2D0CE200DBBFC2 /* RadioTableViewController.m in Sources */,
 				A2C6EC361D33AB8E0000E250 /* ListenListListCell.m in Sources */,
 				A29E4BA41D4329E100C6543B /* AutoWebView.m in Sources */,
 				A20D15501D2D0BDF00DBBFC2 /* RadioModel.m in Sources */,
 				A20D321D1D34C3B500418EEC /* CategoryDetialPageController.m in Sources */,
 				A26756401D3CBB3500791F04 /* BangdanDetialModel.m in Sources */,
+				A259D87D1D485C630086274F /* EditRecommendMoreModel.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				A23564491D2E4AA7004A504B /* WMPageNumModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
@@ -842,6 +892,7 @@
 				A20D155B1D2D0CC700DBBFC2 /* CategoryTableViewController.m in Sources */,
 				A20406371D321839003A9934 /* AlbumTableViewController.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A250E71E1D487D7700FF9B93 /* SpecialListMoreTableViewController.m in Sources */,
 				A221B2741D45E8010092952F /* UIImage+SetImageSize.m in Sources */,
 				A20D32231D34C3E900418EEC /* OtherPageTableViewController.m in Sources */,
 				A20406321D320E7F003A9934 /* AlbumDetialListModel.m in Sources */,
@@ -851,6 +902,7 @@
 				A20D15611D2D0CF300DBBFC2 /* ListTableViewController.m in Sources */,
 				A235644F1D2F48E4004A504B /* HorizontalItemCell.m in Sources */,
 				A2E32A8F1D30E292002226B2 /* bangdanCell.m in Sources */,
+				A259D8801D485C710086274F /* SpecialListMoreModel.m in Sources */,
 				A2750F5D1D3875C9003FE6F5 /* RadioCategoryModel.m in Sources */,
 				A23564561D2F4BEE004A504B /* DiscorverPageController.m in Sources */,
 				A2C6EC331D33AB590000E250 /* ListenListHeadCell.m in Sources */,

@@ -1,4 +1,7 @@
 #import "HorizontalItemCell.h"
+#import "AutoWebView.h"
+#import "CategoryDetialPageController.h"
+#import "BangdanDetialTableviewController.h"
 #define btnG 30
 
 
@@ -14,6 +17,7 @@
 - (instancetype)initWithArr:(NSArray<RecommendModelDiscoverColumnList *> *)itemDetial{
     self= [super init];
     if (self ) {
+        
         _itemDetial = itemDetial;
         UIScrollView *sc = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 100)];
         [self.contentView addSubview:sc];
@@ -29,7 +33,22 @@
                 make.width.height.equalTo(btnW);
             }];
             [btn bk_addEventHandler:^(id sender) {
-                
+                if (![_itemDetial[i].url isEqualToString:@""]) {
+                    AutoWebView *awv = [[AutoWebView alloc]initWithUrl:_itemDetial[i].url];
+                    awv.navigationItem.title = _itemDetial[i].title;
+                    [self.viewController.navigationController pushViewController:awv animated:YES];
+                }else{
+                    if ([_itemDetial[i].contentType isEqualToString:@"album_category"]) {
+                        CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:1 statMoudle:@"付费精品" pageType:@""];
+                        [self.viewController.navigationController pushViewController:wmpage animated:YES];
+                    }else if([_itemDetial[i].title isEqualToString:@"经典必听"]){
+                        BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType:@"album"  key: @"1_21_ranking:album:subscribed:30:0"];
+                        [self.viewController.navigationController pushViewController:bdtvc animated:YES];
+                    }else if([_itemDetial[i].title isEqualToString:@"热门分享"]){
+                        BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType:@"track"  key: @"1_54_ranking:track:shared:1:0 "];
+                        [self.viewController.navigationController pushViewController:bdtvc animated:YES];
+                    }
+                }
             } forControlEvents:UIControlEventTouchUpInside];
             
             UIImageView *imageV = [[UIImageView alloc]init];

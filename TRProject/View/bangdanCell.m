@@ -136,6 +136,7 @@
     if ([_datas.title isEqualToString:@"主播榜单"]) {
         
     }else{
+        NSLog(@"%@---%@",self.datas.list[indexPath.row].contentType   , self.datas.list[indexPath.row].key);
         BangdanDetialTableviewController *bdtvc = [[BangdanDetialTableviewController alloc]initWithType: self.datas.list[indexPath.row].contentType key: self.datas.list[indexPath.row].key];
         [self.viewController.navigationController pushViewController:bdtvc animated:YES];
     }

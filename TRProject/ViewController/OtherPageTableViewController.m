@@ -21,12 +21,14 @@
     return self.otherModel.list.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    tableView.separatorStyle=NO;//去掉分隔线
     ListenListListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListenListListCell" forIndexPath:indexPath];
     [cell.imageV setImageURL:_otherModel.list[indexPath.row].albumCoverUrl290.yx_URL];
     cell.titleLab.text = _otherModel.list[indexPath.row].title;
     cell.midLab.text = _otherModel.list[indexPath.row].intro;
     cell.playCountsLab.text =_otherModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_otherModel.list[indexPath.row].playsCounts/10000.0]:@(_otherModel.list[indexPath.row].playsCounts).stringValue;
     cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_otherModel.list[indexPath.row].tracks];
+    [cell bottonLine];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -36,6 +38,7 @@
         cell.midLab.text = _otherModel.list[indexPath.row].intro;
         cell.playCountsLab.text =_otherModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_otherModel.list[indexPath.row].playsCounts/10000.0]:@(_otherModel.list[indexPath.row].playsCounts).stringValue;
         cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_otherModel.list[indexPath.row].tracks];
+        [cell bottonLine];
     }];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

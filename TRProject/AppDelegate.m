@@ -14,6 +14,7 @@
 #import "DownloadListenController.h"
 #import "MineTableViewController.h"
 #import "PlayerViewController.h"
+#import "MainTabBarViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -43,9 +44,11 @@
     PlayerViewController *player = [[PlayerViewController alloc]initWithCustom];
     UINavigationController *naviplayer = [[UINavigationController alloc]initWithRootViewController:player];
     
-    UITabBarController *tbc = [UITabBarController new];
+    MainTabBarViewController *tbc = [MainTabBarViewController new];
     tbc.viewControllers = @[disNavi,subNavi,naviplayer,downNavi,mineNavi];
     tbc.tabBar.translucent=NO;
+    
+    
     self.window.rootViewController =tbc;
     self.window.tintColor=[UIColor redColor];
     return YES;

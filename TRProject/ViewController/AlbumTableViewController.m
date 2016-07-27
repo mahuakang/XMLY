@@ -35,7 +35,7 @@
     if (indexPath.section==0) {
         AlbumHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumHeadCell" forIndexPath:indexPath];
         AlbumDetialListModelDataAlbum *_Headdata = self.adlModel.data.album;
-        [cell.imagev setImageURL:_Headdata.coverOrigin.yx_URL];
+        [cell.imagev sd_setImageWithURL:_Headdata.coverOrigin.yx_URL];
         cell.titleLab.text = _Headdata.title;
         [cell.nickNameBtn setTitle:_Headdata.nickname forState:UIControlStateNormal];
         cell.playTime.text = [NSString stringWithFormat:@"播放: %@次",_Headdata.playTimes>10000?[NSString stringWithFormat:@"%.1f万",_Headdata.playTimes/10000.0]:@(_Headdata.playTimes).stringValue];

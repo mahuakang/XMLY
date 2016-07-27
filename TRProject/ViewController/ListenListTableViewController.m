@@ -59,7 +59,7 @@
             cell.midLab.text = _listenListModel.list[indexPath.row].intro;
             cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
             cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
-            
+            [cell bottonLine];
             return cell;
         }
     }
@@ -76,13 +76,27 @@
             [cell xiaobian];
         }];
     }else{
-        return [tableView fd_heightForCellWithIdentifier:@"ListenListListCell" configuration:^(ListenListListCell*  cell) {
-            [cell.imageV setImageURL:_listenListModel.list[indexPath.row].albumCoverUrl290.yx_URL];
-            cell.titleLab.text = _listenListModel.list[indexPath.row].title;
-            cell.midLab.text = _listenListModel.list[indexPath.row].intro;
-            cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
-            cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
-        }];
+        if (_listenListModel.info.contentType==1) {
+            return [tableView fd_heightForCellWithIdentifier:@"ListenListListCell" configuration:^(ListenListListCell*  cell) {
+                [cell.imageV setImageURL:_listenListModel.list[indexPath.row].albumCoverUrl290.yx_URL];
+                cell.titleLab.text = _listenListModel.list[indexPath.row].title;
+                cell.midLab.text = _listenListModel.list[indexPath.row].intro;
+                cell.playCountsLab.text =_listenListModel.list[indexPath.row].playsCounts>10000?[NSString stringWithFormat:@"%.1f万",_listenListModel.list[indexPath.row].playsCounts/10000.0]:@(_listenListModel.list[indexPath.row].playsCounts).stringValue;
+                cell.tracksCounts.text = [NSString stringWithFormat:@"%ld集",_listenListModel.list[indexPath.row].tracksCounts];
+            }];
+        }else {
+            return [tableView fd_heightForCellWithIdentifier:@"AlbumListCell" configuration:^(AlbumListCell * cell) {
+                ListenListModelList *list =_listenListModel.list[indexPath.row];
+                [cell.imageV setImageURL:list.coverSmall.yx_URL];
+                cell.titleLab.text = list.title;
+                cell.playTimesLab.text = list.playsCounts>10000?[NSString stringWithFormat:@"%.1f万", list.playsCounts/10000.0]:@( list.playsCounts).stringValue;
+                cell.duration.text = list.duration>60
+                ?[NSString stringWithFormat:@"%@:%@",list.duration/60>10?@(list.duration/60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration/60],list.duration%60>10?@(list.duration%60).stringValue:[NSString stringWithFormat:@"0%ld",list.duration%60]]
+                :[NSString stringWithFormat:@"00:%ld",list.duration];
+                cell.commentsLab.text = @(list.commentsCounts).stringValue;
+                [cell bottonLine];
+            }];
+        }
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

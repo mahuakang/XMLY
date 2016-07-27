@@ -32,8 +32,8 @@
     self.navigationItem.title = _Title;
     //设置图片
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_coversmall.yx_URL]];
-    image = [image setSelfSize:CGSizeMake(32, 32)];
-    image = [image cutImageWithRadius:16];
+    image = [image setSelfSize:CGSizeMake(40, 40)];
+    image = [image cutImageWithRadius:20];
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.tabBarItem.image = image;
     

@@ -65,7 +65,7 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:self.itemDetial[indexPath.row].Id statMoudle:self.itemDetial[indexPath.row].title pageType:@"发现_分类"];
+    CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:self.itemDetial[indexPath.row].Id statMoudle:self.itemDetial[indexPath.row].title pageType:@""];
     [self.viewController.navigationController pushViewController:wmpage animated:YES];
     
 }

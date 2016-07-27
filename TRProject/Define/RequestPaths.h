@@ -35,6 +35,11 @@
 
 #define bandanDetialPath @"http://mobile.ximalaya.com/mobile/discovery/v2/rankingList/%@?device=android&key=%@&pageId=1&pageSize=20&scale=2"
 
+#define specialListMorePath @"http://mobile.ximalaya.com/m/subject_list?device=android&page=%ld&per_page=10&statEvent=pageview/subjectlist@精品听单&statModule=精品听单_更多&statPage=tab@发现_推荐"
+
+#define editRecommendMorePath @"http://mobile.ximalaya.com/mobile/discovery/v1/recommend/editor?device=android&pageId=%ld&pageSize=20&statEvent=pageview/albumlist@小编推荐&statModule=小编推荐_更多&statPage=tab@发现_推荐"
+
+#define fucusimagePath @"http://mobile.ximalaya.com/mobile/discovery/v3/category/recommends?categoryId=1&contentType=album&device=android&version=5.4.21"
 #endif /* RequestPaths_h */
 
 

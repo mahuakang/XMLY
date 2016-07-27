@@ -30,4 +30,10 @@
 + (instancetype)getRadioCategoryListById:(NSInteger)Id Page:(NSInteger)page completionHandler:(void(^)(id model,NSError*error))completionHandler;
 
 + (instancetype)getBangdanDetialByType:(NSString* )type key:(NSString *)key completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getEditRecommendMoreModel:(NSInteger)page completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getSpecialListMorModel:(NSInteger)page completionHandler:(void(^)(id model,NSError*error))completionHandler;
+
++ (instancetype)getfocusimagecompletionHandler:(void(^)(id model,NSError*error))completionHandler;
 @end

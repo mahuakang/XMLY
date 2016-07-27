@@ -117,7 +117,8 @@
             make.width.equalTo(kScreenW);
         }];
         _slider.minimumTrackTintColor = [UIColor orangeColor];
-        
+        _slider.enabled=NO;
+        [_slider setThumbImage:[UIImage imageNamed:@"btn_slider"] forState:UIControlStateNormal];
     }
     return _slider;
 }

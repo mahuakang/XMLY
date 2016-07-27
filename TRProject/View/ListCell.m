@@ -8,7 +8,7 @@
 
 #import "ListCell.h"
 #import "PlayerViewController.h"
-
+#import "RadioCategoryTableViewController.h"
 /*=======================RadiosCell begin=============================*/
 
 @implementation RadiosCell
@@ -199,10 +199,16 @@
             make.right.equalTo(-30);
             make.centerY.equalTo(0);
         }];
-        [_button setTitle:@"更多" forState:UIControlStateNormal];
-        [_button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_button setImage:[UIImage imageNamed:@"findsection_more_h"] forState:UIControlStateNormal];
+        [_button setImage:[UIImage imageNamed:@"findsection_more_n"] forState:UIControlStateHighlighted];
         [_button bk_addEventHandler:^(id sender) {
-            NSLog(@"q");
+            if (_currentSection==1) {
+                RadioCategoryTableViewController *rctvc = [[RadioCategoryTableViewController alloc]initWithId:1 CategoryName:@"各地广播"];
+                [self.viewController.navigationController pushViewController:rctvc animated:YES];
+            }else{
+                RadioCategoryTableViewController *rctvc = [[RadioCategoryTableViewController alloc]initWithId:5 CategoryName:@"排行榜"];
+                [self.viewController.navigationController pushViewController:rctvc animated:YES];
+            }
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _cellHeadView;

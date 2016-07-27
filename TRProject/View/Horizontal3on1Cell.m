@@ -8,6 +8,8 @@
 
 #import "Horizontal3on1Cell.h"
 #import "AlbumTableViewController.h"
+#import "CategoryDetialPageController.h"
+#import "EditMoreTableViewController.h"
 /*=============ThreeCell begin======================*/
 @interface ThreeCell :UICollectionViewCell
 @property (nonatomic,strong)UIImageView *imageview;
@@ -141,10 +143,17 @@
             make.right.equalTo(-30);
             make.centerY.equalTo(0);
         }];
-        [button setTitle:@"更多" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        
+        [button setImage:[UIImage imageNamed:@"findsection_more_h"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"findsection_more_n"] forState:UIControlStateHighlighted];
         [button bk_addEventHandler:^(id sender) {
-            NSLog(@"q");
+            if (_currentSession==1) {
+                EditMoreTableViewController *edit = [[EditMoreTableViewController alloc]init];
+                [self.viewController.navigationController pushViewController:edit animated:YES];
+            }else{
+                CategoryDetialPageController *wmpage = [[CategoryDetialPageController alloc]initWithId:self.listDetial.categoryId statMoudle:self.listDetial.title pageType:@"w"];
+                [self.viewController.navigationController pushViewController:wmpage animated:YES];
+            }
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _cellHeadView;

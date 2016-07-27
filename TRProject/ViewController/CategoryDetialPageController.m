@@ -24,9 +24,10 @@
     if (self) {
         self.menuViewStyle =1;
         self.menuHeight=45;
-        self.menuItemWidth=kScreenW/5;
+        self.menuItemWidth=kScreenW/4;
         self.menuBGColor =[UIColor clearColor];
-        self.navigationItem.title = @"";
+        
+        
         UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
         backbutton.title = @"";
         self.navigationItem.backBarButtonItem = backbutton;
@@ -34,6 +35,7 @@
         _statMoudle = statMoudle;
         _pageType = pageType;
         self.navigationItem.title = _statMoudle;
+        
     }
     return self;
 }

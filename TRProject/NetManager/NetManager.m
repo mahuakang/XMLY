@@ -19,6 +19,9 @@
 #import "WMOtherPageModel.h"
 #import "RadioCategoryModel.h"
 #import "BangdanDetialModel.h"
+#import "EditRecommendMoreModel.h"
+#import "SpecialListMoreModel.h"
+#import "FocusimageModel.h"
 @implementation NetManager
 
 //发现_推荐
@@ -99,6 +102,27 @@
     NSString *path = [NSString stringWithFormat:bandanDetialPath,type,key];
     return [self GET:path parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
         !completionHandler?:completionHandler([BangdanDetialModel parseJSON:jsonObject],error);
+    }];
+}
+//推荐_小编推荐_更多
++ (instancetype)getEditRecommendMoreModel:(NSInteger)page completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *Path = [NSString stringWithFormat:editRecommendMorePath,page];
+    return [self GET:[Path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([EditRecommendMoreModel parseJSON:jsonObject],error);
+    }];
+}
+//听单_更多
++ (instancetype)getSpecialListMorModel:(NSInteger)page completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path = [NSString stringWithFormat:specialListMorePath,page];
+    return [self GET:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([SpecialListMoreModel parseJSON:jsonObject],error);
+    }];
+    
+}
++ (instancetype)getfocusimagecompletionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *path = [NSString stringWithFormat:fucusimagePath];
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler?:completionHandler([FocusimageModel parseJSON:jsonObject],error);
     }];
 }
 @end
